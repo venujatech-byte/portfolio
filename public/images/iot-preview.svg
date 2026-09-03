@@ -1,0 +1,93 @@
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iotBg" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#061A14"/>
+      <stop offset="100%" stop-color="#020B08"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+    <linearGradient id="pulseGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" rx="16" fill="url(#iotBg)"/>
+  <rect width="800" height="480" rx="16" stroke="#064E3B" stroke-opacity="0.5" stroke-width="1.5"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="44" rx="16" fill="#031E17" fill-opacity="0.9"/>
+  <circle cx="28" cy="22" r="5" fill="#EF4444" fill-opacity="0.8"/>
+  <circle cx="44" cy="22" r="5" fill="#F59E0B" fill-opacity="0.8"/>
+  <circle cx="60" cy="22" r="5" fill="#10B981" fill-opacity="0.8"/>
+  <text x="84" y="26" fill="#6EE7B7" font-family="monospace" font-size="12" font-weight="600">ESP32 / ARDUINO HARDWARE TELEMETRY CONSOLE</text>
+  <rect x="670" y="12" width="105" height="20" rx="4" fill="#064E3B" fill-opacity="0.6"/>
+  <circle cx="682" cy="22" r="3" fill="#34D399"/>
+  <text x="692" y="26" fill="#A7F3D0" font-family="monospace" font-size="10">Wi-Fi: CONNECTED</text>
+
+  <!-- Circuit Blueprint Grid Lines -->
+  <g opacity="0.15" stroke="#10B981" stroke-width="0.75">
+    <path d="M 0 100 H 800 M 0 160 H 800 M 0 220 H 800 M 0 280 H 800 M 0 340 H 800 M 0 400 H 800" />
+    <path d="M 100 0 V 480 M 200 0 V 480 M 300 0 V 480 M 400 0 V 480 M 500 0 V 480 M 600 0 V 480 M 700 0 V 480" />
+  </g>
+
+  <!-- Central ESP32 Microcontroller IC Representation -->
+  <rect x="60" y="80" width="220" height="340" rx="12" fill="#0B2B20" stroke="#10B981" stroke-width="2"/>
+  <rect x="80" y="100" width="180" height="110" rx="6" fill="#041812" stroke="#059669" stroke-width="1.5"/>
+  <text x="120" y="145" fill="#ECFDF5" font-family="monospace" font-size="16" font-weight="700">ESP32-WROOM</text>
+  <text x="110" y="165" fill="#6EE7B7" font-family="monospace" font-size="11">Xtensa Dual-Core 32-bit</text>
+  <text x="135" y="185" fill="#34D399" font-family="monospace" font-size="10">2.4 GHz Wi-Fi + BT</text>
+
+  <!-- Pins Left & Right -->
+  <g fill="#34D399" opacity="0.8">
+    <circle cx="50" cy="130" r="4"/><circle cx="50" cy="160" r="4"/><circle cx="50" cy="190" r="4"/><circle cx="50" cy="220" r="4"/><circle cx="50" cy="250" r="4"/><circle cx="50" cy="280" r="4"/><circle cx="50" cy="310" r="4"/><circle cx="50" cy="340" r="4"/><circle cx="50" cy="370" r="4"/>
+    <circle cx="290" cy="130" r="4"/><circle cx="290" cy="160" r="4"/><circle cx="290" cy="190" r="4"/><circle cx="290" cy="220" r="4"/><circle cx="290" cy="250" r="4"/><circle cx="290" cy="280" r="4"/><circle cx="290" cy="310" r="4"/><circle cx="290" cy="340" r="4"/><circle cx="290" cy="370" r="4"/>
+  </g>
+
+  <!-- Microcontroller GPIO status -->
+  <rect x="80" y="230" width="180" height="165" rx="6" fill="#041812" stroke="#059669" stroke-width="1"/>
+  <text x="94" y="252" fill="#A7F3D0" font-family="monospace" font-size="11" font-weight="600">GPIO PIN STATES</text>
+  <text x="94" y="276" fill="#D1FAE5" font-family="monospace" font-size="10">D02 (STATUS LED): <tspan fill="#34D399">HIGH (3.3V)</tspan></text>
+  <text x="94" y="296" fill="#D1FAE5" font-family="monospace" font-size="10">D04 (I2C SDA):    <tspan fill="#6EE7B7">SYNCED</tspan></text>
+  <text x="94" y="316" fill="#D1FAE5" font-family="monospace" font-size="10">D05 (I2C SCL):    <tspan fill="#6EE7B7">SYNCED</tspan></text>
+  <text x="94" y="336" fill="#D1FAE5" font-family="monospace" font-size="10">D18 (RELAY OUT):  <tspan fill="#FBBF24">STANDBY</tspan></text>
+  <text x="94" y="356" fill="#D1FAE5" font-family="monospace" font-size="10">D21 (SENSOR IN):  <tspan fill="#34D399">STREAMING</tspan></text>
+  <text x="94" y="376" fill="#D1FAE5" font-family="monospace" font-size="10">SYS FREQ:         <tspan fill="#A7F3D0">240 MHz</tspan></text>
+
+  <!-- Telemetry Graph Panel -->
+  <rect x="320" y="80" width="440" height="200" rx="10" fill="#07221A" stroke="#064E3B" stroke-width="1.5"/>
+  <text x="340" y="110" fill="#ECFDF5" font-family="monospace" font-size="13" font-weight="600">REAL-TIME SENSOR TELEMETRY BUS</text>
+  <text x="340" y="128" fill="#6EE7B7" font-family="monospace" font-size="10">Sampling Interval: 100ms | Dynamic Debounce Active</text>
+
+  <path d="M 340 230 Q 380 180 430 200 T 500 160 T 580 190 T 660 140 T 730 170 L 730 250 L 340 250 Z" fill="url(#pulseGrad)"/>
+  <path d="M 340 230 Q 380 180 430 200 T 500 160 T 580 190 T 660 140 T 730 170" stroke="#34D399" stroke-width="2.5" fill="none"/>
+  
+  <circle cx="580" cy="190" r="4" fill="#34D399"/>
+  <circle cx="660" cy="140" r="4" fill="#FBBF24"/>
+  <circle cx="730" cy="170" r="4" fill="#34D399"/>
+
+  <!-- Live Readout Dials -->
+  <rect x="320" y="300" width="135" height="120" rx="8" fill="#07221A" stroke="#064E3B" stroke-width="1"/>
+  <text x="335" y="324" fill="#A7F3D0" font-family="monospace" font-size="11">TEMPERATURE</text>
+  <text x="335" y="358" fill="#ECFDF5" font-family="monospace" font-size="24" font-weight="700">26.4°C</text>
+  <text x="335" y="380" fill="#34D399" font-family="monospace" font-size="10">Ambient Stable</text>
+  <rect x="335" y="394" width="100" height="6" rx="3" fill="#031E17"/>
+  <rect x="335" y="394" width="65" height="6" rx="3" fill="#10B981"/>
+
+  <rect x="472" y="300" width="135" height="120" rx="8" fill="#07221A" stroke="#064E3B" stroke-width="1"/>
+  <text x="487" y="324" fill="#A7F3D0" font-family="monospace" font-size="11">HUMIDITY</text>
+  <text x="487" y="358" fill="#ECFDF5" font-family="monospace" font-size="24" font-weight="700">68%</text>
+  <text x="487" y="380" fill="#38BDF8" font-family="monospace" font-size="10">Optimal Range</text>
+  <rect x="487" y="394" width="100" height="6" rx="3" fill="#031E17"/>
+  <rect x="487" y="394" width="70" height="6" rx="3" fill="#38BDF8"/>
+
+  <rect x="624" y="300" width="136" height="120" rx="8" fill="#07221A" stroke="#064E3B" stroke-width="1"/>
+  <text x="639" y="324" fill="#A7F3D0" font-family="monospace" font-size="11">LOOP LATENCY</text>
+  <text x="639" y="358" fill="#ECFDF5" font-family="monospace" font-size="24" font-weight="700">12ms</text>
+  <text x="639" y="380" fill="#10B981" font-family="monospace" font-size="10">Zero Packet Loss</text>
+  <rect x="639" y="394" width="100" height="6" rx="3" fill="#031E17"/>
+  <rect x="639" y="394" width="22" height="6" rx="3" fill="#34D399"/>
+</svg>

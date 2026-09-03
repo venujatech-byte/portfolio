@@ -1,0 +1,93 @@
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="weatherBg" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#081A24"/>
+      <stop offset="100%" stop-color="#030A10"/>
+    </linearGradient>
+    <linearGradient id="rainGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Window Base -->
+  <rect width="800" height="480" rx="16" fill="url(#weatherBg)"/>
+  <rect width="800" height="480" rx="16" stroke="#0369A1" stroke-opacity="0.5" stroke-width="1.5"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="44" rx="16" fill="#0C2534" fill-opacity="0.9"/>
+  <circle cx="28" cy="22" r="5" fill="#EF4444" fill-opacity="0.8"/>
+  <circle cx="44" cy="22" r="5" fill="#F59E0B" fill-opacity="0.8"/>
+  <circle cx="60" cy="22" r="5" fill="#10B981" fill-opacity="0.8"/>
+  <text x="84" y="26" fill="#7DD3FC" font-family="monospace" font-size="12" font-weight="600">ESP32 METEOROLOGICAL TELEMETRY &amp; RAINFALL WARNING SYSTEM</text>
+  
+  <rect x="670" y="12" width="105" height="20" rx="4" fill="#0284C7" fill-opacity="0.3"/>
+  <circle cx="682" cy="22" r="3" fill="#38BDF8"/>
+  <text x="692" y="26" fill="#BAE6FD" font-family="monospace" font-size="10">POLL: 60s INTERVAL</text>
+
+  <!-- Left: Weather Sensor Gauge Cluster -->
+  <rect x="24" y="60" width="410" height="394" rx="10" fill="#0B212E" stroke="#0284C7" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="44" y="88" fill="#F0F9FF" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Hyper-Local Environmental Sensors (ESP32)</text>
+
+  <!-- Primary Rainfall Status Banner -->
+  <rect x="40" y="104" width="378" height="74" rx="8" fill="#075985" fill-opacity="0.4" stroke="#38BDF8" stroke-width="1.5"/>
+  <circle cx="70" cy="141" r="18" fill="#0284C7"/>
+  <path d="M 70 129 C 70 129 62 141 62 146 C 62 150 66 153 70 153 C 74 153 78 150 78 146 C 78 141 70 129 70 129 Z" fill="#E0F2FE"/>
+  <text x="100" y="132" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11" font-weight="600">RAIN SENSOR DETECTOR</text>
+  <text x="100" y="154" fill="#F0F9FF" font-family="system-ui, sans-serif" font-size="18" font-weight="700">PRECIPITATION DETECTED</text>
+  <rect x="330" y="126" width="76" height="26" rx="4" fill="#EF4444"/>
+  <text x="342" y="143" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="700">CRITICAL</text>
+
+  <!-- Gauges Grid -->
+  <rect x="40" y="190" width="182" height="110" rx="8" fill="#0E2D3E" stroke="#0369A1" stroke-width="1"/>
+  <text x="56" y="214" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="11" font-weight="600">TEMPERATURE</text>
+  <text x="56" y="248" fill="#F0F9FF" font-family="system-ui, sans-serif" font-size="28" font-weight="700">28.5°C</text>
+  <text x="56" y="272" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11">Sensor DHT22 • Stable</text>
+  <rect x="56" y="284" width="150" height="6" rx="3" fill="#081A24"/>
+  <rect x="56" y="284" width="105" height="6" rx="3" fill="#38BDF8"/>
+
+  <rect x="236" y="190" width="182" height="110" rx="8" fill="#0E2D3E" stroke="#0369A1" stroke-width="1"/>
+  <text x="252" y="214" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="11" font-weight="600">RELATIVE HUMIDITY</text>
+  <text x="252" y="248" fill="#F0F9FF" font-family="system-ui, sans-serif" font-size="28" font-weight="700">84%</text>
+  <text x="252" y="272" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="11">High Vapor Pressure</text>
+  <rect x="252" y="284" width="150" height="6" rx="3" fill="#081A24"/>
+  <rect x="252" y="284" width="126" height="6" rx="3" fill="#60A5FA"/>
+
+  <!-- Barometric & Forecast Integration -->
+  <rect x="40" y="312" width="378" height="126" rx="8" fill="#0E2D3E" stroke="#0369A1" stroke-width="1"/>
+  <text x="56" y="334" fill="#F0F9FF" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Meteorological API Forecast Correlation</text>
+  <text x="56" y="352" fill="#7DD3FC" font-family="monospace" font-size="10">API Status: Synced (OpenWeatherMap JSON endpoint)</text>
+  
+  <path d="M 56 410 Q 110 380 170 395 T 260 370 T 340 380 T 400 365 L 400 422 L 56 422 Z" fill="url(#rainGrad)"/>
+  <path d="M 56 410 Q 110 380 170 395 T 260 370 T 340 380 T 400 365" stroke="#38BDF8" stroke-width="2" fill="none"/>
+
+  <!-- Right: Telegram Alert Notification Stream -->
+  <rect x="450" y="60" width="326" height="394" rx="10" fill="#081E2C" stroke="#0369A1" stroke-opacity="0.8" stroke-width="1.5"/>
+  <rect x="450" y="60" width="326" height="42" rx="10" fill="#0C2D42"/>
+  <circle cx="474" cy="81" r="12" fill="#0284C7"/>
+  <text x="469" y="86" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="700">✈</text>
+  <text x="496" y="80" fill="#F0F9FF" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Telegram Weather Bot</text>
+  <text x="496" y="93" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="10">ESP32 Dispatch Channel</text>
+
+  <!-- Telegram Chat Bubble 1 (Alert) -->
+  <rect x="466" y="118" width="294" height="120" rx="10" fill="#143A52" stroke="#0284C7" stroke-width="1"/>
+  <text x="480" y="140" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">⛈ URGENT WEATHER ALERT</text>
+  <text x="480" y="160" fill="#E0F2FE" font-family="system-ui, sans-serif" font-size="11">Rainfall triggered on physical sensor array!</text>
+  <text x="480" y="178" fill="#BAE6FD" font-family="monospace" font-size="10">Temp: 28.5°C | Hum: 84% | Rain: HIGH</text>
+  <text x="480" y="196" fill="#E0F2FE" font-family="system-ui, sans-serif" font-size="11">Forecast: Heavy showers next 45 min.</text>
+  <text x="700" y="226" fill="#7DD3FC" font-family="monospace" font-size="9">14:32:01 ✓✓</text>
+
+  <!-- Telegram Chat Bubble 2 (User query) -->
+  <rect x="580" y="252" width="180" height="40" rx="10" fill="#0284C7"/>
+  <text x="594" y="276" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11">/status</text>
+  <text x="715" y="284" fill="#E0F2FE" font-family="monospace" font-size="9">14:33 ✓✓</text>
+
+  <!-- Telegram Chat Bubble 3 (Bot reply) -->
+  <rect x="466" y="304" width="294" height="124" rx="10" fill="#143A52" stroke="#0284C7" stroke-width="1"/>
+  <text x="480" y="326" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="12" font-weight="700">ESP32 System Status: Online</text>
+  <text x="480" y="346" fill="#E0F2FE" font-family="monospace" font-size="10">• Precipitation Sensor: ACTIVE (Wet)</text>
+  <text x="480" y="364" fill="#E0F2FE" font-family="monospace" font-size="10">• Uptime: 72 hrs 14 min</text>
+  <text x="480" y="382" fill="#E0F2FE" font-family="monospace" font-size="10">• RSSI: -54 dBm (Strong Wi-Fi)</text>
+  <text x="480" y="400" fill="#34D399" font-family="monospace" font-size="10">• Next Auto-Poll in: 42s</text>
+  <text x="700" y="416" fill="#7DD3FC" font-family="monospace" font-size="9">14:33:04 ✓✓</text>
+</svg>

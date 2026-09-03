@@ -1,0 +1,101 @@
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="launcherBg" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#18130B"/>
+      <stop offset="100%" stop-color="#080603"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Window Frame -->
+  <rect width="800" height="480" rx="16" fill="url(#launcherBg)"/>
+  <rect width="800" height="480" rx="16" stroke="#451A03" stroke-opacity="0.6" stroke-width="1.5"/>
+
+  <!-- Title bar (Tkinter native feel modernized) -->
+  <rect x="0" y="0" width="800" height="44" rx="16" fill="#201509" fill-opacity="0.95"/>
+  <circle cx="28" cy="22" r="5" fill="#EF4444" fill-opacity="0.8"/>
+  <circle cx="44" cy="22" r="5" fill="#F59E0B" fill-opacity="0.8"/>
+  <circle cx="60" cy="22" r="5" fill="#10B981" fill-opacity="0.8"/>
+  <text x="84" y="26" fill="#FDE68A" font-family="monospace" font-size="12" font-weight="600">Developer Server Launcher v2.4 [Python / Tkinter GUI]</text>
+
+  <!-- Action Bar -->
+  <rect x="24" y="60" width="752" height="50" rx="8" fill="#2E1C0C" stroke="#78350F" stroke-width="1"/>
+  
+  <rect x="36" y="70" width="130" height="30" rx="6" fill="#10B981"/>
+  <text x="56" y="90" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="700">▶ Start All</text>
+
+  <rect x="178" y="70" width="130" height="30" rx="6" fill="#DC2626"/>
+  <text x="198" y="90" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="700">■ Stop All</text>
+
+  <rect x="320" y="70" width="140" height="30" rx="6" fill="#1E293B" stroke="#78350F" stroke-width="1"/>
+  <text x="336" y="90" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12" font-weight="500">+ Add Server</text>
+
+  <rect x="472" y="70" width="160" height="30" rx="6" fill="#1E293B" stroke="#78350F" stroke-width="1"/>
+  <text x="488" y="90" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12" font-weight="500">⚡ Inspect Ports</text>
+
+  <rect x="644" y="70" width="120" height="30" rx="6" fill="#B45309" fill-opacity="0.3" stroke="#F59E0B" stroke-width="1"/>
+  <text x="656" y="90" fill="#FBBF24" font-family="monospace" font-size="11" font-weight="600">Active: 3/4</text>
+
+  <!-- Left: Server List -->
+  <rect x="24" y="124" width="310" height="330" rx="10" fill="#1E140B" stroke="#78350F" stroke-opacity="0.8"/>
+  <text x="40" y="148" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Configured Servers</text>
+
+  <!-- Server 1 Card -->
+  <rect x="36" y="162" width="286" height="66" rx="8" fill="#2E1C0C" stroke="#10B981" stroke-width="1.5"/>
+  <circle cx="54" cy="184" r="5" fill="#10B981"/>
+  <text x="68" y="188" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Next.js Frontend Client</text>
+  <text x="68" y="206" fill="#FCD34D" font-family="monospace" font-size="10">Port: 3000 • PID: 14820</text>
+  <rect x="250" y="174" width="60" height="24" rx="4" fill="#EF4444" fill-opacity="0.2"/>
+  <text x="264" y="190" fill="#F87171" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Stop</text>
+
+  <!-- Server 2 Card -->
+  <rect x="36" y="238" width="286" height="66" rx="8" fill="#2E1C0C" stroke="#10B981" stroke-width="1.5"/>
+  <circle cx="54" cy="260" r="5" fill="#10B981"/>
+  <text x="68" y="264" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Flask Microservice API</text>
+  <text x="68" y="282" fill="#FCD34D" font-family="monospace" font-size="10">Port: 5000 • PID: 9284</text>
+  <rect x="250" y="250" width="60" height="24" rx="4" fill="#EF4444" fill-opacity="0.2"/>
+  <text x="264" y="266" fill="#F87171" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Stop</text>
+
+  <!-- Server 3 Card -->
+  <rect x="36" y="314" width="286" height="66" rx="8" fill="#2E1C0C" stroke="#10B981" stroke-width="1.5"/>
+  <circle cx="54" cy="336" r="5" fill="#10B981"/>
+  <text x="68" y="340" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="600">FastAPI ML Engine</text>
+  <text x="68" y="358" fill="#FCD34D" font-family="monospace" font-size="10">Port: 8000 • PID: 11048</text>
+  <rect x="250" y="326" width="60" height="24" rx="4" fill="#EF4444" fill-opacity="0.2"/>
+  <text x="264" y="342" fill="#F87171" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Stop</text>
+
+  <!-- Server 4 Card (Stopped) -->
+  <rect x="36" y="390" width="286" height="54" rx="8" fill="#241609" stroke="#52290B" stroke-width="1"/>
+  <circle cx="54" cy="414" r="5" fill="#64748B"/>
+  <text x="68" y="418" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Redis Cache Server</text>
+  <rect x="250" y="402" width="60" height="24" rx="4" fill="#10B981" fill-opacity="0.2"/>
+  <text x="262" y="418" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Start</text>
+
+  <!-- Right: Terminal Live Log Stream -->
+  <rect x="350" y="124" width="426" height="330" rx="10" fill="#0C0A07" stroke="#451A03" stroke-width="1.5"/>
+  
+  <!-- Terminal Header -->
+  <rect x="350" y="124" width="426" height="34" rx="10" fill="#1E140B"/>
+  <text x="368" y="146" fill="#FDE68A" font-family="monospace" font-size="11" font-weight="600">LIVE CONSOLE STREAM [PORT 3000 &amp; 5000]</text>
+  <rect x="710" y="132" width="54" height="18" rx="4" fill="#78350F" fill-opacity="0.4"/>
+  <text x="718" y="145" fill="#FBBF24" font-family="monospace" font-size="9">STREAM</text>
+
+  <!-- Terminal Lines -->
+  <g font-family="monospace" font-size="11">
+    <text x="368" y="180" fill="#10B981">[Next.js]  ▲ Next.js 15.0 - Ready in 1280ms</text>
+    <text x="368" y="202" fill="#38BDF8">[Next.js]  ○ Compiling /dashboard ...</text>
+    <text x="368" y="224" fill="#10B981">[Next.js]  ✓ Compiled /dashboard in 248ms (421 modules)</text>
+    <text x="368" y="246" fill="#F59E0B">[Flask]    * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)</text>
+    <text x="368" y="268" fill="#94A3B8">[Flask]    * Restarting with stat</text>
+    <text x="368" y="290" fill="#10B981">[Flask]    * Debugger is active!</text>
+    <text x="368" y="312" fill="#E2E8F0">[Flask]    127.0.0.1 - - [POST] "/api/v1/orders" 200 OK</text>
+    <text x="368" y="334" fill="#E2E8F0">[Flask]    127.0.0.1 - - [GET]  "/api/v1/telemetry" 200 OK</text>
+    <text x="368" y="356" fill="#38BDF8">[Next.js]  GET /api/v1/orders 200 in 34ms</text>
+    <text x="368" y="378" fill="#F59E0B">[Process]  Port inspection scan: 3 active listeners detected.</text>
+    <text x="368" y="400" fill="#10B981">[Process]  Socket handle PID 14820 alive. Memory: 112MB.</text>
+    <text x="368" y="424" fill="#FDE68A">> _</text>
+  </g>
+</svg>

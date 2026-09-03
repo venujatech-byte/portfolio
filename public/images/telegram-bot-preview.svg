@@ -1,0 +1,99 @@
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tgBg" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0A1828"/>
+      <stop offset="100%" stop-color="#040A12"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Window Base -->
+  <rect width="800" height="480" rx="16" fill="url(#tgBg)"/>
+  <rect width="800" height="480" rx="16" stroke="#0E7490" stroke-opacity="0.5" stroke-width="1.5"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="44" rx="16" fill="#0E2338" fill-opacity="0.9"/>
+  <circle cx="28" cy="22" r="5" fill="#EF4444" fill-opacity="0.8"/>
+  <circle cx="44" cy="22" r="5" fill="#F59E0B" fill-opacity="0.8"/>
+  <circle cx="60" cy="22" r="5" fill="#10B981" fill-opacity="0.8"/>
+  <text x="84" y="26" fill="#67E8F9" font-family="monospace" font-size="12" font-weight="600">ESP32 TELEGRAM BOT CONTROLLER &amp; REMOTE AUTOMATION GATEWAY</text>
+  
+  <rect x="670" y="12" width="105" height="20" rx="4" fill="#0891B2" fill-opacity="0.3"/>
+  <circle cx="682" cy="22" r="3" fill="#22D3EE"/>
+  <text x="692" y="26" fill="#CFFAFE" font-family="monospace" font-size="10">HTTPS POLLING</text>
+
+  <!-- Left: Telegram Chat Interface -->
+  <rect x="24" y="60" width="410" height="394" rx="10" fill="#0C1F33" stroke="#0891B2" stroke-opacity="0.6" stroke-width="1.5"/>
+  <rect x="24" y="60" width="410" height="46" rx="10" fill="#122A44"/>
+  <circle cx="50" cy="83" r="14" fill="url(#cyanGrad)"/>
+  <text x="44" y="88" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">✈</text>
+  <text x="74" y="80" fill="#F0FDFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700">ESP32 IoT Node Bot</text>
+  <text x="74" y="95" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="10">bot • online • token authorized</text>
+
+  <!-- Chat Message 1: User /help command -->
+  <rect x="220" y="120" width="194" height="36" rx="8" fill="#0891B2"/>
+  <text x="234" y="142" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12">/relay1 on</text>
+  <text x="375" y="148" fill="#CFFAFE" font-family="monospace" font-size="9">19:14 ✓✓</text>
+
+  <!-- Chat Message 2: Bot confirmation with GPIO state -->
+  <rect x="40" y="168" width="300" height="76" rx="8" fill="#163756" stroke="#0E7490" stroke-width="1"/>
+  <text x="54" y="190" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="11" font-weight="700">⚡ GPIO Command Executed</text>
+  <text x="54" y="210" fill="#E0F2FE" font-family="monospace" font-size="10">Relay #1 switched to: HIGH [ON]</text>
+  <text x="54" y="228" fill="#34D399" font-family="monospace" font-size="10">Pin D18 Driven (3.3V) | Latency: 140ms</text>
+  <text x="295" y="236" fill="#67E8F9" font-family="monospace" font-size="9">19:14:02</text>
+
+  <!-- Chat Message 3: User telemetry query -->
+  <rect x="220" y="258" width="194" height="36" rx="8" fill="#0891B2"/>
+  <text x="234" y="280" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12">/telemetry</text>
+  <text x="375" y="286" fill="#CFFAFE" font-family="monospace" font-size="9">19:15 ✓✓</text>
+
+  <!-- Chat Message 4: Bot telemetry card -->
+  <rect x="40" y="306" width="300" height="106" rx="8" fill="#163756" stroke="#0E7490" stroke-width="1"/>
+  <text x="54" y="328" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">📊 ESP32 System Telemetry</text>
+  <text x="54" y="348" fill="#E0F2FE" font-family="monospace" font-size="10">• Free Heap: 184,320 bytes</text>
+  <text x="54" y="366" fill="#E0F2FE" font-family="monospace" font-size="10">• Wi-Fi Signal: -58 dBm (Strong)</text>
+  <text x="54" y="384" fill="#E0F2FE" font-family="monospace" font-size="10">• Connected Actuators: 2 Relays</text>
+  <text x="54" y="402" fill="#E0F2FE" font-family="monospace" font-size="10">• Loop Execution Time: 4.8ms</text>
+  <text x="295" y="404" fill="#67E8F9" font-family="monospace" font-size="9">19:15:01</text>
+
+  <!-- Right: Architecture & Hardware Circuit Gateway Diagram -->
+  <rect x="450" y="60" width="326" height="394" rx="10" fill="#0B2034" stroke="#0891B2" stroke-opacity="0.8" stroke-width="1.5"/>
+  <text x="470" y="88" fill="#F0FDFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Firmware Architecture &amp; Security</text>
+
+  <!-- Security Protocol Card -->
+  <rect x="466" y="106" width="294" height="66" rx="6" fill="#132F4C" stroke="#0891B2" stroke-width="1"/>
+  <text x="480" y="126" fill="#67E8F9" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Zero-Port-Forward Architecture</text>
+  <text x="480" y="144" fill="#CFFAFE" font-family="system-ui, sans-serif" font-size="10">ESP32 initiates outbound HTTPS long-poll to Telegram Cloud. Runs securely behind NAT firewalls.</text>
+
+  <!-- Microcontroller Pinout Gateway -->
+  <rect x="466" y="184" width="294" height="150" rx="6" fill="#132F4C" stroke="#0891B2" stroke-width="1"/>
+  <text x="480" y="204" fill="#F0FDFF" font-family="monospace" font-size="11" font-weight="600">FIRMWARE PIPELINE</text>
+  
+  <rect x="480" y="216" width="266" height="24" rx="4" fill="#0E4268"/>
+  <text x="492" y="232" fill="#BAE6FD" font-family="monospace" font-size="10">1. Bot Polling Loop (TLS 1.2 / SSL)</text>
+
+  <rect x="480" y="246" width="266" height="24" rx="4" fill="#0E4268"/>
+  <text x="492" y="262" fill="#BAE6FD" font-family="monospace" font-size="10">2. JSON Payload Parser &amp; Auth Filter</text>
+
+  <rect x="480" y="276" width="266" height="24" rx="4" fill="#0E4268"/>
+  <text x="492" y="292" fill="#BAE6FD" font-family="monospace" font-size="10">3. GPIO Actuator &amp; Sensor Dispatcher</text>
+
+  <rect x="480" y="306" width="266" height="20" rx="4" fill="#0E7490" fill-opacity="0.4"/>
+  <text x="492" y="320" fill="#67E8F9" font-family="monospace" font-size="9">Watchdog Timer: Active (Auto-recovery)</text>
+
+  <!-- Live Output Indicators -->
+  <rect x="466" y="346" width="140" height="94" rx="6" fill="#132F4C" stroke="#0891B2" stroke-width="1"/>
+  <text x="478" y="368" fill="#CFFAFE" font-family="system-ui, sans-serif" font-size="11">Relay #1 (Light)</text>
+  <rect x="478" y="378" width="60" height="20" rx="4" fill="#10B981" fill-opacity="0.2"/>
+  <text x="488" y="392" fill="#34D399" font-family="monospace" font-size="10" font-weight="700">ACTIVE</text>
+  <text x="478" y="424" fill="#67E8F9" font-family="monospace" font-size="9">Pin D18 • 3.3V</text>
+
+  <rect x="620" y="346" width="140" height="94" rx="6" fill="#132F4C" stroke="#0891B2" stroke-width="1"/>
+  <text x="632" y="368" fill="#CFFAFE" font-family="system-ui, sans-serif" font-size="11">Relay #2 (Pump)</text>
+  <rect x="632" y="378" width="60" height="20" rx="4" fill="#64748B" fill-opacity="0.2"/>
+  <text x="642" y="392" fill="#94A3B8" font-family="monospace" font-size="10" font-weight="700">STANDBY</text>
+  <text x="632" y="424" fill="#67E8F9" font-family="monospace" font-size="9">Pin D19 • LOW</text>
+</svg>

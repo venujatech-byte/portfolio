@@ -1,0 +1,152 @@
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" rx="16" fill="url(#bg)"/>
+  <rect width="800" height="480" rx="16" stroke="#334155" stroke-opacity="0.4" stroke-width="1.5"/>
+
+  <!-- Top App Bar -->
+  <rect x="0" y="0" width="800" height="48" rx="16" fill="#0F172A" fill-opacity="0.9"/>
+  <circle cx="28" cy="24" r="5" fill="#EF4444" fill-opacity="0.8"/>
+  <circle cx="44" cy="24" r="5" fill="#F59E0B" fill-opacity="0.8"/>
+  <circle cx="60" cy="24" r="5" fill="#10B981" fill-opacity="0.8"/>
+  
+  <rect x="220" y="12" width="360" height="24" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="320" y="28" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">vendly-lk.vercel.app/dashboard</text>
+  <circle cx="236" cy="24" r="3" fill="#10B981"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="48" width="180" height="432" fill="#0F172A" fill-opacity="0.6"/>
+  <line x1="180" y1="48" x2="180" y2="480" stroke="#334155" stroke-opacity="0.4"/>
+  
+  <!-- Logo -->
+  <rect x="20" y="68" width="28" height="28" rx="8" fill="url(#blueGrad)"/>
+  <text x="30" y="87" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="700">V</text>
+  <text x="56" y="86" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="15" font-weight="700">Vendly<tspan fill="#38BDF8">.lk</tspan></text>
+
+  <!-- Sidebar Nav items -->
+  <rect x="16" y="116" width="148" height="34" rx="8" fill="#1E293B" fill-opacity="0.9"/>
+  <rect x="24" y="124" width="16" height="16" rx="4" fill="#3B82F6"/>
+  <text x="48" y="137" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Dashboard</text>
+
+  <text x="48" y="174" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Orders &amp; Sales</text>
+  <circle cx="32" cy="170" r="4" fill="#64748B"/>
+
+  <text x="48" y="210" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Inventory</text>
+  <circle cx="32" cy="206" r="4" fill="#64748B"/>
+
+  <text x="48" y="246" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Customers</text>
+  <circle cx="32" cy="242" r="4" fill="#64748B"/>
+
+  <text x="48" y="282" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Analytics</text>
+  <circle cx="32" cy="278" r="4" fill="#64748B"/>
+
+  <text x="48" y="318" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Settings</text>
+  <circle cx="32" cy="314" r="4" fill="#64748B"/>
+
+  <!-- User badge -->
+  <rect x="16" y="420" width="148" height="42" rx="8" fill="#1E293B" stroke="#334155" stroke-opacity="0.5"/>
+  <circle cx="36" cy="441" r="12" fill="#6366F1"/>
+  <text x="32" y="445" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">VS</text>
+  <text x="56" y="437" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Team Leader</text>
+  <text x="56" y="449" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="10">Active Admin</text>
+
+  <!-- Main Content Dashboard -->
+  <!-- Stats Cards Row -->
+  <rect x="204" y="68" width="180" height="74" rx="10" fill="url(#cardBg)" stroke="#334155" stroke-opacity="0.6"/>
+  <text x="220" y="88" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Total Active Orders</text>
+  <text x="220" y="116" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="22" font-weight="700">148</text>
+  <rect x="330" y="98" width="42" height="18" rx="4" fill="#10B981" fill-opacity="0.15"/>
+  <text x="336" y="111" fill="#34D399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">+18%</text>
+
+  <rect x="398" y="68" width="180" height="74" rx="10" fill="url(#cardBg)" stroke="#334155" stroke-opacity="0.6"/>
+  <text x="414" y="88" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Inventory Units</text>
+  <text x="414" y="116" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="22" font-weight="700">1,240</text>
+  <rect x="524" y="98" width="44" height="18" rx="4" fill="#3B82F6" fill-opacity="0.15"/>
+  <text x="532" y="111" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Synced</text>
+
+  <rect x="592" y="68" width="186" height="74" rx="10" fill="url(#cardBg)" stroke="#334155" stroke-opacity="0.6"/>
+  <text x="608" y="88" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">System Status</text>
+  <text x="608" y="116" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Operational</text>
+  <circle cx="754" cy="105" r="5" fill="#10B981"/>
+
+  <!-- Chart & Order Matrix -->
+  <rect x="204" y="156" width="374" height="180" rx="10" fill="url(#cardBg)" stroke="#334155" stroke-opacity="0.6"/>
+  <text x="220" y="180" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Order Volume Analytics</text>
+  <text x="220" y="196" fill="#64748B" font-family="system-ui, sans-serif" font-size="10">Real-time order fulfillment trend</text>
+  
+  <!-- Wave Graph -->
+  <path d="M 224 290 Q 270 240 310 260 T 400 210 T 470 230 T 550 190 L 550 310 L 224 310 Z" fill="url(#chartGrad)"/>
+  <path d="M 224 290 Q 270 240 310 260 T 400 210 T 470 230 T 550 190" stroke="#38BDF8" stroke-width="2.5" fill="none"/>
+  <circle cx="470" cy="230" r="4" fill="#38BDF8" stroke="#0B1120" stroke-width="2"/>
+  <circle cx="550" cy="190" r="4" fill="#6366F1" stroke="#0B1120" stroke-width="2"/>
+
+  <!-- Live Orders Queue Card -->
+  <rect x="592" y="156" width="186" height="302" rx="10" fill="url(#cardBg)" stroke="#334155" stroke-opacity="0.6"/>
+  <text x="608" y="180" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Recent Orders</text>
+  
+  <!-- Order item 1 -->
+  <rect x="604" y="196" width="162" height="48" rx="6" fill="#1E293B" stroke="#334155" stroke-opacity="0.4"/>
+  <text x="614" y="214" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11" font-weight="600">#ORD-9421</text>
+  <text x="614" y="230" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Express Delivery</text>
+  <rect x="710" y="206" width="48" height="16" rx="4" fill="#10B981" fill-opacity="0.2"/>
+  <text x="716" y="218" fill="#34D399" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Shipped</text>
+
+  <!-- Order item 2 -->
+  <rect x="604" y="250" width="162" height="48" rx="6" fill="#1E293B" stroke="#334155" stroke-opacity="0.4"/>
+  <text x="614" y="268" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11" font-weight="600">#ORD-9420</text>
+  <text x="614" y="284" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Standard Shipping</text>
+  <rect x="712" y="260" width="46" height="16" rx="4" fill="#F59E0B" fill-opacity="0.2"/>
+  <text x="718" y="272" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Pending</text>
+
+  <!-- Order item 3 -->
+  <rect x="604" y="304" width="162" height="48" rx="6" fill="#1E293B" stroke="#334155" stroke-opacity="0.4"/>
+  <text x="614" y="322" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11" font-weight="600">#ORD-9419</text>
+  <text x="614" y="338" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Direct Pickup</text>
+  <rect x="710" y="314" width="48" height="16" rx="4" fill="#10B981" fill-opacity="0.2"/>
+  <text x="716" y="326" fill="#34D399" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Shipped</text>
+
+  <!-- Order item 4 -->
+  <rect x="604" y="358" width="162" height="48" rx="6" fill="#1E293B" stroke="#334155" stroke-opacity="0.4"/>
+  <text x="614" y="376" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11" font-weight="600">#ORD-9418</text>
+  <text x="614" y="392" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Express Delivery</text>
+  <rect x="710" y="368" width="48" height="16" rx="4" fill="#6366F1" fill-opacity="0.2"/>
+  <text x="717" y="380" fill="#818CF8" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Packed</text>
+
+  <!-- Bottom Inventory Table Mini -->
+  <rect x="204" y="348" width="374" height="110" rx="10" fill="url(#cardBg)" stroke="#334155" stroke-opacity="0.6"/>
+  <text x="220" y="370" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Inventory Stock Status (Real-time Firebase Sync)</text>
+  <line x1="220" y1="382" x2="560" y2="382" stroke="#334155" stroke-opacity="0.5"/>
+  
+  <text x="220" y="402" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">Product SKU-821 (Apparel Set)</text>
+  <text x="440" y="402" fill="#10B981" font-family="system-ui, sans-serif" font-size="11">86 in Stock</text>
+  <rect x="520" y="392" width="38" height="14" rx="3" fill="#10B981" fill-opacity="0.2"/>
+  <text x="526" y="402" fill="#34D399" font-family="system-ui, sans-serif" font-size="9">Good</text>
+
+  <text x="220" y="426" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">Product SKU-402 (Accessory Kit)</text>
+  <text x="440" y="426" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="11">12 in Stock</text>
+  <rect x="520" y="416" width="38" height="14" rx="3" fill="#F59E0B" fill-opacity="0.2"/>
+  <text x="527" y="426" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="9">Low</text>
+
+  <text x="220" y="450" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">Product SKU-109 (Essential Bundle)</text>
+  <text x="440" y="450" fill="#10B981" font-family="system-ui, sans-serif" font-size="11">240 in Stock</text>
+  <rect x="520" y="440" width="38" height="14" rx="3" fill="#10B981" fill-opacity="0.2"/>
+  <text x="526" y="450" fill="#34D399" font-family="system-ui, sans-serif" font-size="9">Good</text>
+</svg>
