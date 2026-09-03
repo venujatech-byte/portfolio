@@ -14,6 +14,7 @@ import {
   Bell,
   ArrowRight,
 } from "lucide-react";
+import { Figma } from "@/components/BrandIcons";
 
 export default function Workflow() {
   const webSteps = [
