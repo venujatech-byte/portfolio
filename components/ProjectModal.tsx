@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   X,
   ExternalLink,
-  Github,
   CheckCircle2,
   Users,
   Cpu,
@@ -15,6 +14,7 @@ import {
   Sparkles,
   ArrowRight,
 } from "lucide-react";
+import { Github } from "@/components/BrandIcons";
 import { Project } from "@/data/projects";
 
 interface ProjectModalProps {

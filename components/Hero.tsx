@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   Send,
-  Github,
-  Linkedin,
   Layers,
   Cpu,
   Smartphone,
@@ -13,6 +11,7 @@ import {
   Terminal,
   Bot,
 } from "lucide-react";
+import { Github, Linkedin } from "@/components/BrandIcons";
 
 export default function Hero() {
   const domains = [

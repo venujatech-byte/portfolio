@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Github, Linkedin, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin } from "@/components/BrandIcons";
 
 const navLinks = [
   { name: "About", href: "#about" },

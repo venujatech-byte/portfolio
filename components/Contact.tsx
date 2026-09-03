@@ -5,13 +5,12 @@ import { motion } from "framer-motion";
 import {
   Mail,
   Send,
-  Github,
-  Linkedin,
   CheckCircle2,
   AlertCircle,
   Copy,
   Check,
 } from "lucide-react";
+import { Github, Linkedin } from "@/components/BrandIcons";
 
 export default function Contact() {
   const [formData, setFormData] = useState({

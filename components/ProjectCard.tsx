@@ -4,12 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ExternalLink,
-  Github,
   ArrowRight,
   Sparkles,
   Users,
   Info,
 } from "lucide-react";
+import { Github } from "@/components/BrandIcons";
 import { Project } from "@/data/projects";
 
 interface ProjectCardProps {

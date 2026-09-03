@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import {
-  Github,
   GitFork,
   Star,
   ExternalLink,
@@ -10,6 +9,7 @@ import {
   FolderGit2,
   ArrowUpRight,
 } from "lucide-react";
+import { Github } from "@/components/BrandIcons";
 
 export default function GithubSection() {
   const verifiedRepositories = [

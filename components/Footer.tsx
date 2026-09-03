@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowUp, Github, Linkedin, Heart } from "lucide-react";
+import { ArrowUp, Heart } from "lucide-react";
+import { Github, Linkedin } from "@/components/BrandIcons";
 
 export default function Footer() {
   const scrollToTop = () => {

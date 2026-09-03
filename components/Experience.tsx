@@ -9,8 +9,8 @@ import {
   Layers,
   Cpu,
   ExternalLink,
-  Github,
 } from "lucide-react";
+import { Github } from "@/components/BrandIcons";
 
 export default function Experience() {
   const experiences = [

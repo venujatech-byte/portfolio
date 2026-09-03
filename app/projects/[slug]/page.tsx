@@ -8,13 +8,13 @@ import Footer from "@/components/Footer";
 import {
   ArrowLeft,
   ExternalLink,
-  Github,
   CheckCircle2,
   Users,
   Cpu,
   Layers,
   Sparkles,
 } from "lucide-react";
+import { Github } from "@/components/BrandIcons";
 
 interface ProjectPageProps {
   params: Promise<{
