@@ -82,12 +82,12 @@ export default function Navbar() {
               <Github className="w-4 h-4" />
             </a>
             <a
-              href="https://linkedin.com/in/venuja-silva-placeholder"
+              href="https://www.linkedin.com/in/contact-venuja-silva"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-slate-400 hover:text-white hover:bg-slate-800/80 rounded-lg border border-slate-700/50 transition-colors"
-              aria-label="LinkedIn Profile (Placeholder)"
-              title="Replace with your LinkedIn link"
+              aria-label="LinkedIn Profile"
+              title="Venuja Silva LinkedIn"
             >
               <Linkedin className="w-4 h-4" />
             </a>
@@ -150,7 +150,7 @@ export default function Navbar() {
                   <Github className="w-4 h-4" /> GitHub
                 </a>
                 <a
-                  href="https://linkedin.com/in/venuja-silva-placeholder"
+                  href="https://www.linkedin.com/in/contact-venuja-silva"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-xs text-slate-300 hover:text-white"

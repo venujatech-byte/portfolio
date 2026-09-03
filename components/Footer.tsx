@@ -51,7 +51,7 @@ export default function Footer() {
               <Github className="w-4 h-4" />
             </a>
             <a
-              href="https://linkedin.com/in/venuja-silva-placeholder"
+              href="https://www.linkedin.com/in/contact-venuja-silva"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"

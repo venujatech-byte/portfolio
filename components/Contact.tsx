@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Mail,
+  Phone,
   Send,
   CheckCircle2,
   AlertCircle,
@@ -20,17 +21,24 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [copied, setCopied] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
 
-  // Email placeholder easily configurable
-  const contactEmail = "YOUR_EMAIL@example.com";
-  const linkedInUrl = "https://linkedin.com/in/venuja-silva-placeholder";
+  const contactEmail = "venujatech@gmail.com";
+  const contactPhone = "0767722934";
+  const linkedInUrl = "https://www.linkedin.com/in/contact-venuja-silva";
   const gitHubUrl = "https://github.com/venujatech-byte";
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(contactEmail);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2000);
+  };
+
+  const handleCopyPhone = () => {
+    navigator.clipboard.writeText(contactPhone);
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2000);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -96,7 +104,40 @@ export default function Contact() {
                   title="Copy email to clipboard"
                   aria-label="Copy email"
                 >
-                  {copied ? (
+                  {copiedEmail ? (
+                    <Check className="w-4 h-4 text-emerald-400" />
+                  ) : (
+                    <Copy className="w-4 h-4" />
+                  )}
+                </button>
+              </div>
+
+              {/* Phone / Contact Card */}
+              <div className="glass-panel p-4 rounded-xl border border-white/10 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-xs text-slate-400 block font-medium">
+                      Direct Contact / WhatsApp
+                    </span>
+                    <a
+                      href={`tel:${contactPhone}`}
+                      className="text-sm font-semibold text-white hover:text-emerald-300 transition-colors font-mono"
+                    >
+                      {contactPhone}
+                    </a>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleCopyPhone}
+                  className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors"
+                  title="Copy phone number to clipboard"
+                  aria-label="Copy phone"
+                >
+                  {copiedPhone ? (
                     <Check className="w-4 h-4 text-emerald-400" />
                   ) : (
                     <Copy className="w-4 h-4" />
@@ -122,7 +163,7 @@ export default function Contact() {
                 </div>
               </a>
 
-              {/* LinkedIn Link (Placeholder) */}
+              {/* LinkedIn Link */}
               <a
                 href={linkedInUrl}
                 target="_blank"
@@ -134,10 +175,10 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-xs text-slate-400 block font-medium">
-                    LinkedIn (Placeholder)
+                    LinkedIn
                   </span>
                   <span className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors font-mono">
-                    linkedin.com/in/venuja-silva
+                    linkedin.com/in/contact-venuja-silva
                   </span>
                 </div>
               </a>

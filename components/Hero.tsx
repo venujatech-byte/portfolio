@@ -120,12 +120,12 @@ export default function Hero() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/venuja-silva-placeholder"
+                href="https://www.linkedin.com/in/contact-venuja-silva"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 transition-all hover:scale-105"
-                aria-label="Venuja Silva LinkedIn (Placeholder)"
-                title="LinkedIn Profile (placeholder link)"
+                aria-label="Venuja Silva LinkedIn"
+                title="LinkedIn Profile"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
