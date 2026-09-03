@@ -21,6 +21,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://venujasilva.dev"),
   title: "Venuja Silva | Software Developer | AI & IoT Enthusiast",
   description:
     "Portfolio of Venuja Silva — software developer building web applications, mobile apps, AI-powered solutions, IoT systems, and developer tools.",
