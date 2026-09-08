@@ -52,8 +52,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/vendly-preview.png",
-        width: 1365,
-        height: 627,
         alt: "Venuja Silva Developer Portfolio",
       },
     ],
