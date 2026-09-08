@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     title: "Venuja Silva | Software Developer",
     description:
       "Portfolio of Venuja Silva — software developer building web applications, mobile apps, AI-powered solutions, IoT systems, and developer tools.",
-    images: ["/images/vendly-preview.svg"],
+    images: ["/images/vendly-preview.png"],
   },
   robots: {
     index: true,
