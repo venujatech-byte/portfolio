@@ -196,7 +196,7 @@ export const projects: Project[] = [
     featured: false,
     accentColor: "from-amber-500 to-orange-600",
     gradient: "from-amber-600/20 via-orange-600/10 to-transparent",
-    image: "/images/server-launcher-preview.svg",
+    image: "/images/server-launcher-preview.png",
     badge: "Desktop Utility",
   },
   {
