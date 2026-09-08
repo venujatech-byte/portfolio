@@ -62,7 +62,13 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Heading & Contact Info */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
+          <motion.div
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-5 flex flex-col gap-6"
+          >
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
                 Get In Touch
@@ -183,10 +189,16 @@ export default function Contact() {
                 </div>
               </a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Interactive Form */}
-          <div className="lg:col-span-7">
+          <motion.div
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="lg:col-span-7"
+          >
             <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 relative shadow-xl">
               <h3 className="text-xl font-bold text-white mb-2">Send a Message</h3>
               <p className="text-xs sm:text-sm text-slate-400 mb-6">
@@ -289,7 +301,7 @@ export default function Contact() {
                 </form>
               )}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

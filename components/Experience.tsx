@@ -78,7 +78,13 @@ export default function Experience() {
     <section id="experience" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center text-center mb-16"
+        >
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
             Roles &amp; Experience
           </div>
@@ -90,7 +96,7 @@ export default function Experience() {
             and systems development.
           </p>
           <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-4" />
-        </div>
+        </motion.div>
 
         {/* Timeline */}
         <div className="relative border-l-2 border-slate-800 ml-4 md:ml-32 space-y-12">

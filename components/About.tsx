@@ -53,7 +53,13 @@ export default function About() {
     <section id="about" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center text-center mb-16"
+        >
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
             About Me
           </div>
@@ -61,7 +67,7 @@ export default function About() {
             Engineering Practical, High-Impact Technology
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-3" />
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left: Bio / Narrative */}
@@ -118,18 +124,16 @@ export default function About() {
           </motion.div>
 
           {/* Right: Key Highlights / Stats Cards */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4"
-          >
-            {highlights.map((item) => {
+          <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+            {highlights.map((item, idx) => {
               const IconComp = item.icon;
               return (
-                <div
+                <motion.div
                   key={item.title}
+                  initial={{ opacity: 0, x: 25 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="glass-panel glass-panel-hover p-5 rounded-xl border border-white/5 flex items-start gap-4"
                 >
                   <div
@@ -145,12 +149,18 @@ export default function About() {
                       {item.subtitle}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
 
             {/* Quote / Philosophy Box */}
-            <div className="glass-panel p-5 rounded-xl border-l-4 border-l-cyan-500 bg-gradient-to-r from-cyan-950/20 to-transparent">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="glass-panel p-5 rounded-xl border-l-4 border-l-cyan-500 bg-gradient-to-r from-cyan-950/20 to-transparent"
+            >
               <p className="text-xs sm:text-sm text-slate-300 italic">
                 &ldquo;Great software isn&apos;t just code that runs—it is thoughtful design,
                 dependable architecture, and practical value for the people who use it.&rdquo;
@@ -158,8 +168,8 @@ export default function About() {
               <span className="block mt-2 text-xs font-semibold text-cyan-400">
                 — Venuja Silva
               </span>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

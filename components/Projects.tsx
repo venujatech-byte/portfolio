@@ -38,7 +38,13 @@ export default function Projects() {
     <section id="projects" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center text-center mb-12"
+        >
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
             Portfolio Showcase
           </div>
@@ -50,10 +56,16 @@ export default function Projects() {
             embedded microcontrollers, desktop productivity tools, and automated notifications.
           </p>
           <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-4" />
-        </div>
+        </motion.div>
 
         {/* Filter Navigation Bar */}
-        <div className="flex items-center justify-center mb-12 overflow-x-auto pb-2 scrollbar-none">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="flex items-center justify-center mb-12 overflow-x-auto pb-2 scrollbar-none"
+        >
           <div className="flex items-center gap-1.5 p-1.5 rounded-2xl glass-panel border border-white/10 shadow-lg">
             {filterOptions.map((category) => {
               const isActive = activeFilter === category;
@@ -79,7 +91,7 @@ export default function Projects() {
               );
             })}
           </div>
-        </div>
+        </motion.div>
 
         {/* Projects Grid with AnimatePresence */}
         <AnimatePresence mode="wait">

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import ScrollProgress from "@/components/ScrollProgress";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "Venuja Silva Portfolio",
     images: [
       {
-        url: "/images/vendly-preview.svg",
+        url: "/images/vendly-preview.png",
         width: 1200,
         height: 630,
         alt: "Venuja Silva Developer Portfolio",
@@ -81,6 +82,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark`}
     >
       <body className="min-h-screen bg-[#07090e] text-slate-100 antialiased selection:bg-cyan-500 selection:text-white relative">
+        <ScrollProgress />
         <div className="fixed inset-0 pointer-events-none bg-grid-pattern opacity-60 z-0" />
         <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-radial-glow pointer-events-none z-0" />
         <div className="relative z-10 flex min-h-screen flex-col">
