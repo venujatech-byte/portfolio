@@ -114,14 +114,17 @@ export default function Experience() {
 
               {/* Card */}
               <div
-                className={`glass-panel glass-panel-hover p-6 sm:p-8 rounded-2xl border ${
-                  exp.featured
-                    ? "border-cyan-500/30 shadow-lg shadow-cyan-950/30"
-                    : "border-white/10"
-                }`}
+                className="p-6 sm:p-8 rounded-2xl"
+                style={exp.featured ? {
+                  background: "rgba(12,19,38,0.88)",
+                  boxShadow: "0 16px 48px -12px rgba(0,0,0,0.65), 0 0 40px -20px rgba(6,182,212,0.12)"
+                } : {
+                  background: "rgba(12,19,38,0.75)",
+                  boxShadow: "0 8px 32px -8px rgba(0,0,0,0.55)"
+                }}
               >
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <span className="px-3 py-1 rounded-md text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                  <span className="px-3 py-1 rounded-full text-xs font-semibold text-cyan-400" style={{ background: "rgba(6,182,212,0.10)" }}>
                     {exp.type}
                   </span>
                   <div className="flex items-center gap-1.5 text-xs text-slate-400 font-mono">
@@ -154,7 +157,8 @@ export default function Experience() {
                   {exp.technologies.map((t) => (
                     <span
                       key={t}
-                      className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-900 text-slate-300 border border-white/5"
+                      className="px-2.5 py-1 rounded-md text-xs font-mono text-slate-300"
+                      style={{ background: "rgba(255,255,255,0.05)" }}
                     >
                       {t}
                     </span>
@@ -163,7 +167,7 @@ export default function Experience() {
 
                 {/* Links */}
                 {exp.links && exp.links.length > 0 && (
-                  <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-white/10">
+                  <div className="flex flex-wrap items-center gap-3 pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
                     {exp.links.map((link) => (
                       <a
                         key={link.label}

@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "Venuja Silva Portfolio",
     images: [
       {
-        url: "/images/vendly-preview.png",
+        url: "/public/images/server-launcher-preview.png",
         alt: "Venuja Silva Developer Portfolio",
       },
     ],
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "Venuja Silva | Software Developer",
     description:
       "Portfolio of Venuja Silva — software developer building web applications, mobile apps, AI-powered solutions, IoT systems, and developer tools.",
-    images: ["/images/vendly-preview.png"],
+    images: ["/public/images/server-launcher-preview.png"],
   },
   robots: {
     index: true,

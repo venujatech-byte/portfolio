@@ -96,7 +96,7 @@ export const projects: Project[] = [
     featured: true,
     accentColor: "from-blue-500 to-indigo-600",
     gradient: "from-blue-600/20 via-indigo-600/10 to-transparent",
-    image: "/images/vendly-preview.svg",
+    image: "/images/vendly-preview.png",
     badge: "Primary Featured Project",
   },
   {

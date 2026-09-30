@@ -78,7 +78,9 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 flex flex-col gap-6"
           >
-            <div className="glass-panel p-6 sm:p-8 rounded-2xl relative overflow-hidden">
+            <div className="p-6 sm:p-8 rounded-2xl relative overflow-hidden"
+              style={{ background: "rgba(13,20,38,0.70)", boxShadow: "0 8px 32px -8px rgba(0,0,0,0.5)" }}
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 blur-3xl rounded-full pointer-events-none" />
               <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                 <span>Building at the Intersection of Software &amp; Hardware</span>
@@ -105,7 +107,9 @@ export default function About() {
             </div>
 
             {/* Core Competencies Checklist */}
-            <div className="glass-panel p-6 sm:p-7 rounded-2xl">
+            <div className="p-6 sm:p-7 rounded-2xl"
+              style={{ background: "rgba(13,20,38,0.70)", boxShadow: "0 8px 32px -8px rgba(0,0,0,0.5)" }}
+            >
               <h4 className="text-sm font-semibold text-slate-200 uppercase tracking-wider mb-4">
                 Hands-On Experience Across
               </h4>
@@ -134,10 +138,11 @@ export default function About() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="glass-panel glass-panel-hover p-5 rounded-xl border border-white/5 flex items-start gap-4"
+                  className="p-5 rounded-xl flex items-start gap-4 transition-all duration-300 hover:translate-y-[-2px]"
+                  style={{ background: "rgba(13,20,38,0.70)", boxShadow: "0 4px 20px -6px rgba(0,0,0,0.5)" }}
                 >
                   <div
-                    className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 border ${item.color}`}
+                    className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${item.color}`}
                   >
                     <IconComp className="w-5 h-5" />
                   </div>
@@ -159,7 +164,8 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="glass-panel p-5 rounded-xl border-l-4 border-l-cyan-500 bg-gradient-to-r from-cyan-950/20 to-transparent"
+              className="p-5 rounded-xl border-l-4 border-l-cyan-500"
+              style={{ background: "linear-gradient(90deg, rgba(6,182,212,0.07) 0%, rgba(13,20,38,0.40) 100%)" }}
             >
               <p className="text-xs sm:text-sm text-slate-300 italic">
                 &ldquo;Great software isn&apos;t just code that runs—it is thoughtful design,

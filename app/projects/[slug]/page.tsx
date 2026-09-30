@@ -76,16 +76,16 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
           {/* Header Badges */}
           <div className="flex flex-wrap items-center gap-2 mb-4">
-            <span className="px-3 py-1 rounded-md text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/12 text-cyan-400">
               {project.category}
             </span>
             {project.badge && (
-              <span className="px-3 py-1 rounded-md text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/12 text-blue-400">
                 {project.badge}
               </span>
             )}
             {project.role && (
-              <span className="px-3 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1.5">
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/12 text-emerald-400 flex items-center gap-1.5">
                 <Users className="w-3.5 h-3.5" />
                 Role: {project.role}
               </span>
@@ -97,19 +97,29 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </h1>
 
           {/* Project Visual Showcase */}
-          <div className="relative w-full h-64 sm:h-96 md:h-[450px] rounded-2xl overflow-hidden mb-8 border border-white/10 bg-slate-950 shadow-2xl">
+          <div
+            className="relative w-full rounded-3xl overflow-hidden mb-8"
+            style={{
+              aspectRatio: "16/7",
+              background: "rgba(255,255,255,0.03)",
+              boxShadow: "0 32px 80px -16px rgba(0,0,0,0.7)",
+            }}
+          >
             <Image
               src={project.image}
               alt={project.title}
               fill
-              className="object-contain p-4"
+              className="object-contain"
               sizes="(max-width: 1024px) 100vw, 1000px"
               priority
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#07090e]/50 via-transparent to-transparent pointer-events-none" />
           </div>
 
           {/* Action Links Bar */}
-          <div className="flex flex-wrap items-center gap-3 pb-8 mb-8 border-b border-white/10">
+          <div className="flex flex-wrap items-center gap-3 pb-8 mb-8"
+            style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+          >
             {project.links
               .filter((l) => l.type !== "details")
               .map((link) => (
@@ -118,11 +128,15 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                    link.primary
-                      ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/25 hover:from-cyan-400 hover:to-blue-500 hover:scale-105 active:scale-95"
-                      : "bg-slate-900/90 text-slate-200 hover:bg-slate-800 hover:text-white border border-white/10 hover:scale-105 active:scale-95"
-                  }`}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all hover:scale-105 active:scale-95"
+                  style={link.primary ? {
+                    background: "linear-gradient(135deg, #06b6d4, #3b82f6)",
+                    color: "white",
+                    boxShadow: "0 4px 18px -4px rgba(6,182,212,0.40)",
+                  } : {
+                    background: "rgba(255,255,255,0.07)",
+                    color: "#cbd5e1",
+                  }}
                 >
                   {link.type === "live" ? (
                     <ExternalLink className="w-4 h-4 text-cyan-400" />
@@ -148,21 +162,21 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             {(project.problem || project.solution) && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {project.problem && (
-                  <div className="glass-panel p-6 rounded-2xl border border-white/10">
+                  <div className="p-6 rounded-2xl" style={{ background: "rgba(245,158,11,0.06)" }}>
                     <h3 className="text-sm font-bold text-amber-400 uppercase tracking-wider mb-2">
                       The Problem Statement
                     </h3>
-                    <p className="text-sm text-slate-300 leading-relaxed">
+                    <p className="text-sm text-slate-400 leading-relaxed">
                       {project.problem}
                     </p>
                   </div>
                 )}
                 {project.solution && (
-                  <div className="glass-panel p-6 rounded-2xl border border-white/10">
+                  <div className="p-6 rounded-2xl" style={{ background: "rgba(6,182,212,0.06)" }}>
                     <h3 className="text-sm font-bold text-cyan-400 uppercase tracking-wider mb-2">
                       The Architectural Solution
                     </h3>
-                    <p className="text-sm text-slate-300 leading-relaxed">
+                    <p className="text-sm text-slate-400 leading-relaxed">
                       {project.solution}
                     </p>
                   </div>
@@ -172,14 +186,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
             {/* Role & Leadership */}
             {project.responsibilities && project.responsibilities.length > 0 && (
-              <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10">
+              <div className="p-6 sm:p-8 rounded-2xl" style={{ background: "rgba(255,255,255,0.03)" }}>
                 <h3 className="text-base font-bold text-white mb-4 flex items-center gap-2">
                   <Users className="w-4 h-4 text-cyan-400" />
                   Leadership &amp; Engineering Responsibilities ({project.role || "Developer"})
                 </h3>
                 <div className="space-y-2.5">
                   {project.responsibilities.map((resp, idx) => (
-                    <div key={idx} className="flex items-start gap-3 text-sm text-slate-300">
+                    <div key={idx} className="flex items-start gap-3 text-sm text-slate-400">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                       <span>{resp}</span>
                     </div>
@@ -199,7 +213,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   {project.features.map((feat, idx) => (
                     <div
                       key={idx}
-                      className="p-4 rounded-xl bg-slate-900/60 border border-white/5 flex items-start gap-3 text-sm text-slate-300"
+                      className="p-4 rounded-xl flex items-start gap-3 text-sm text-slate-400"
+                      style={{ background: "rgba(255,255,255,0.04)" }}
                     >
                       <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                       <span>{feat}</span>
@@ -216,13 +231,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   <Layers className="w-5 h-5 text-blue-400" />
                   Development Process &amp; Milestones
                 </h3>
-                <div className="glass-panel p-6 rounded-2xl border border-white/10 space-y-3">
+                <div className="p-6 rounded-2xl space-y-3" style={{ background: "rgba(255,255,255,0.025)" }}>
                   {project.process.map((step, idx) => (
                     <div key={idx} className="flex items-start gap-3 text-sm">
-                      <span className="w-6 h-6 rounded-full bg-slate-800 border border-cyan-500/30 text-cyan-400 font-mono text-xs flex items-center justify-center shrink-0">
+                      <span className="w-5 h-5 rounded-full bg-cyan-500/20 text-cyan-400 font-mono text-xs flex items-center justify-center shrink-0">
                         {idx + 1}
                       </span>
-                      <span className="text-slate-300 mt-0.5">{step}</span>
+                      <span className="text-slate-400 mt-0.5">{step}</span>
                     </div>
                   ))}
                 </div>
@@ -239,7 +254,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900 border border-white/10 text-cyan-300"
+                    className="px-3.5 py-1.5 rounded-lg text-xs font-mono text-cyan-300"
+                    style={{ background: "rgba(6,182,212,0.08)" }}
                   >
                     {tech}
                   </span>

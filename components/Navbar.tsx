@@ -58,7 +58,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 bg-slate-900/60 p-1.5 rounded-full border border-white/10 backdrop-blur-md">
+          <nav className="hidden md:flex items-center gap-1 p-1.5 rounded-full backdrop-blur-md" style={{ background: "rgba(15,23,42,0.55)" }}>
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -76,7 +76,8 @@ export default function Navbar() {
               href="https://github.com/venujatech-byte"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-slate-400 hover:text-white hover:bg-slate-800/80 rounded-lg border border-slate-700/50 transition-colors"
+              className="p-2 text-slate-400 hover:text-white rounded-lg transition-colors"
+              style={{ background: "rgba(255,255,255,0.05)" }}
               aria-label="GitHub Profile"
             >
               <Github className="w-4 h-4" />
@@ -85,7 +86,8 @@ export default function Navbar() {
               href="https://www.linkedin.com/in/contact-venuja-silva"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-slate-400 hover:text-white hover:bg-slate-800/80 rounded-lg border border-slate-700/50 transition-colors"
+              className="p-2 text-slate-400 hover:text-white rounded-lg transition-colors"
+              style={{ background: "rgba(255,255,255,0.05)" }}
               aria-label="LinkedIn Profile"
               title="Venuja Silva LinkedIn"
             >
@@ -110,7 +112,8 @@ export default function Navbar() {
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-300 hover:text-white rounded-lg bg-slate-800/70 border border-slate-700/60"
+              className="p-2 text-slate-300 hover:text-white rounded-lg transition-colors"
+              style={{ background: "rgba(255,255,255,0.07)" }}
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

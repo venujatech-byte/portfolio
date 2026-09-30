@@ -66,7 +66,7 @@ export default function Projects() {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="flex items-center justify-center mb-12 overflow-x-auto pb-2 scrollbar-none"
         >
-          <div className="flex items-center gap-1.5 p-1.5 rounded-2xl glass-panel border border-white/10 shadow-lg">
+          <div className="flex items-center gap-1.5 p-1.5 rounded-2xl shadow-lg" style={{ background: "rgba(13,20,38,0.65)" }}>
             {filterOptions.map((category) => {
               const isActive = activeFilter === category;
               return (

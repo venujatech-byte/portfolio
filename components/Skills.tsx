@@ -65,12 +65,13 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between"
+              className="p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:translate-y-[-3px]"
+              style={{ background: "rgba(13,20,38,0.72)", boxShadow: "0 6px 28px -8px rgba(0,0,0,0.55)" }}
             >
               <div>
                 {/* Category Header */}
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2.5 rounded-xl bg-slate-900 border border-white/10 shadow-inner">
+                  <div className="p-2.5 rounded-xl shadow-inner" style={{ background: "rgba(255,255,255,0.05)" }}>
                     {getIcon(category.icon)}
                   </div>
                   <div>
@@ -91,9 +92,13 @@ export default function Skills() {
                       key={skill.name}
                       className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 ${
                         skill.highlight
-                          ? "bg-cyan-950/40 text-cyan-200 border border-cyan-500/30 shadow-sm shadow-cyan-950/50 hover:border-cyan-400/60 hover:text-white"
-                          : "bg-slate-900/80 text-slate-300 border border-white/5 hover:border-white/20 hover:text-white"
+                          ? "text-cyan-200 hover:text-white"
+                          : "text-slate-300 hover:text-white"
                       }`}
+                      style={skill.highlight
+                        ? { background: "rgba(6,182,212,0.12)" }
+                        : { background: "rgba(255,255,255,0.05)" }
+                      }
                     >
                       {skill.name}
                     </span>

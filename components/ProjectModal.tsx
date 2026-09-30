@@ -52,62 +52,81 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-black/80 backdrop-blur-md transition-opacity"
+          className="fixed inset-0 bg-black/85"
+          style={{ backdropFilter: "blur(12px)" }}
         />
 
         {/* Modal Container */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          initial={{ opacity: 0, scale: 0.94, y: 24 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          transition={{ duration: 0.25 }}
-          className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto glass-panel rounded-2xl border border-white/10 shadow-2xl z-10 bg-[#0c111e]/95 p-6 sm:p-8"
+          exit={{ opacity: 0, scale: 0.94, y: 24 }}
+          transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+          className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl z-10 p-7 sm:p-9"
+          style={{
+            background: "linear-gradient(160deg, rgba(11,18,36,0.98) 0%, rgba(8,13,26,0.99) 100%)",
+            boxShadow: "0 40px 100px -20px rgba(0,0,0,0.85), 0 0 80px -30px rgba(6,182,212,0.12)",
+          }}
         >
+          {/* Ambient glow */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/6 blur-[100px] rounded-full pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-60 h-60 bg-blue-600/6 blur-[80px] rounded-full pointer-events-none" />
+
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-5 right-5 p-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors z-20 border border-white/10"
+            className="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-white transition-colors z-20"
+            style={{ background: "rgba(255,255,255,0.07)" }}
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
           </button>
 
           {/* Header Info */}
-          <div className="flex flex-wrap items-center gap-2 mb-3">
-            <span className="px-3 py-1 rounded-md text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+          <div className="flex flex-wrap items-center gap-2 mb-3 relative z-10">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/12 text-cyan-400">
               {project.category}
             </span>
             {project.badge && (
-              <span className="px-3 py-1 rounded-md text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/12 text-blue-400">
                 {project.badge}
               </span>
             )}
             {project.role && (
-              <span className="px-3 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1.5">
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/12 text-emerald-400 flex items-center gap-1.5">
                 <Users className="w-3 h-3" />
                 Role: {project.role}
               </span>
             )}
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-4">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-5 relative z-10">
             {project.title}
           </h3>
 
-          {/* Visual Showcase Banner */}
-          <div className="relative w-full h-56 sm:h-72 md:h-80 rounded-xl overflow-hidden mb-6 border border-white/10 bg-slate-950">
+          {/* Visual Showcase — aspect-ratio prevents top/bottom letterbox gaps */}
+          <div
+            className="relative w-full rounded-2xl overflow-hidden mb-6 z-10"
+            style={{
+              aspectRatio: "16/7",
+              background: "rgba(255,255,255,0.04)",
+            }}
+          >
             <Image
               src={project.image}
               alt={project.title}
               fill
-              className="object-contain p-2"
+              className="object-contain"
               sizes="(max-width: 768px) 100vw, 800px"
               priority
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#08111f]/50 via-transparent to-transparent pointer-events-none" />
           </div>
 
           {/* Action Links Bar */}
-          <div className="flex flex-wrap items-center gap-3 pb-6 mb-6 border-b border-white/10">
+          <div className="flex flex-wrap items-center gap-3 pb-6 mb-6 relative z-10"
+            style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+          >
             {project.links.map((link) => {
               if (link.type === "details") return null;
               return (
@@ -116,11 +135,17 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all hover:scale-105 active:scale-95 ${
                     link.primary
-                      ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20 hover:from-cyan-400 hover:to-blue-500"
-                      : "bg-slate-800/90 text-slate-200 hover:bg-slate-700 hover:text-white border border-white/10"
+                      ? "text-white"
+                      : "text-slate-300 hover:text-white"
                   }`}
+                  style={link.primary ? {
+                    background: "linear-gradient(135deg, #06b6d4, #3b82f6)",
+                    boxShadow: "0 4px 18px -4px rgba(6,182,212,0.4)",
+                  } : {
+                    background: "rgba(255,255,255,0.07)",
+                  }}
                 >
                   {link.type === "live" ? (
                     <ExternalLink className="w-4 h-4" />
@@ -133,7 +158,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             })}
             <Link
               href={`/projects/${project.slug}`}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 transition-colors ml-auto"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors ml-auto"
+              style={{ background: "rgba(6,182,212,0.07)" }}
             >
               Open dedicated page
               <ArrowRight className="w-3.5 h-3.5" />
@@ -141,12 +167,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           {/* Content Sections */}
-          <div className="space-y-6 text-slate-300 text-sm sm:text-base">
+          <div className="space-y-6 text-slate-300 text-sm sm:text-base relative z-10">
             <div>
-              <h4 className="text-xs uppercase tracking-wider font-bold text-slate-400 mb-2">
+              <h4 className="text-xs uppercase tracking-wider font-bold text-slate-500 mb-2">
                 Project Overview
               </h4>
-              <p className="leading-relaxed text-slate-200">
+              <p className="leading-relaxed text-slate-300">
                 {project.detailedDescription}
               </p>
             </div>
@@ -155,21 +181,21 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {(project.problem || project.solution) && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {project.problem && (
-                  <div className="p-4 rounded-xl bg-slate-900/60 border border-white/5">
+                  <div className="p-4 rounded-2xl" style={{ background: "rgba(245,158,11,0.06)" }}>
                     <h5 className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
                       The Challenge
                     </h5>
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                       {project.problem}
                     </p>
                   </div>
                 )}
                 {project.solution && (
-                  <div className="p-4 rounded-xl bg-slate-900/60 border border-white/5">
+                  <div className="p-4 rounded-2xl" style={{ background: "rgba(6,182,212,0.06)" }}>
                     <h5 className="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-2">
-                      The Architectural Solution
+                      The Solution
                     </h5>
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                       {project.solution}
                     </p>
                   </div>
@@ -180,13 +206,13 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Role & Responsibilities */}
             {project.responsibilities && project.responsibilities.length > 0 && (
               <div>
-                <h4 className="text-xs uppercase tracking-wider font-bold text-slate-400 mb-2 flex items-center gap-2">
+                <h4 className="text-xs uppercase tracking-wider font-bold text-slate-500 mb-3 flex items-center gap-2">
                   <Users className="w-3.5 h-3.5 text-cyan-400" />
                   Key Responsibilities ({project.role || "Developer"})
                 </h4>
                 <div className="space-y-2">
                   {project.responsibilities.map((resp, i) => (
-                    <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                    <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-400">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                       <span>{resp}</span>
                     </div>
@@ -198,13 +224,15 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Key Features */}
             {project.features && project.features.length > 0 && (
               <div>
-                <h4 className="text-xs uppercase tracking-wider font-bold text-slate-400 mb-2 flex items-center gap-2">
+                <h4 className="text-xs uppercase tracking-wider font-bold text-slate-500 mb-3 flex items-center gap-2">
                   <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-                  Key Engineering Features
+                  Key Features
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {project.features.map((feat, i) => (
-                    <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                    <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-400 p-3 rounded-xl"
+                      style={{ background: "rgba(255,255,255,0.03)" }}
+                    >
                       <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                       <span>{feat}</span>
                     </div>
@@ -216,23 +244,26 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Development Process */}
             {project.process && project.process.length > 0 && (
               <div>
-                <h4 className="text-xs uppercase tracking-wider font-bold text-slate-400 mb-2 flex items-center gap-2">
+                <h4 className="text-xs uppercase tracking-wider font-bold text-slate-500 mb-3 flex items-center gap-2">
                   <Layers className="w-3.5 h-3.5 text-blue-400" />
                   Development Process
                 </h4>
-                <ol className="list-decimal list-inside space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <div className="space-y-2.5 p-4 rounded-2xl" style={{ background: "rgba(255,255,255,0.025)" }}>
                   {project.process.map((step, i) => (
-                    <li key={i} className="pl-1">
-                      <span className="text-slate-200">{step}</span>
-                    </li>
+                    <div key={i} className="flex items-start gap-3 text-xs sm:text-sm">
+                      <span className="w-5 h-5 rounded-full bg-cyan-500/20 text-cyan-400 font-mono text-xs flex items-center justify-center shrink-0">
+                        {i + 1}
+                      </span>
+                      <span className="text-slate-400 mt-0.5">{step}</span>
+                    </div>
                   ))}
-                </ol>
+                </div>
               </div>
             )}
 
-            {/* Technology Stack Tags */}
+            {/* Technology Stack */}
             <div>
-              <h4 className="text-xs uppercase tracking-wider font-bold text-slate-400 mb-2.5 flex items-center gap-2">
+              <h4 className="text-xs uppercase tracking-wider font-bold text-slate-500 mb-3 flex items-center gap-2">
                 <Cpu className="w-3.5 h-3.5 text-cyan-400" />
                 Technologies Used
               </h4>
@@ -240,7 +271,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 rounded-md text-xs font-mono bg-slate-900 border border-white/10 text-cyan-300"
+                    className="px-3 py-1.5 rounded-lg text-xs font-mono text-cyan-300"
+                    style={{ background: "rgba(6,182,212,0.08)" }}
                   >
                     {tech}
                   </span>
