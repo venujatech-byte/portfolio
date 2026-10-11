@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -24,7 +25,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden flex flex-col justify-center min-h-[90vh]"
+      className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden flex flex-col justify-center min-h-[90vh]"
     >
       {/* Subtle background glow accents */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none" />
@@ -32,6 +33,26 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+
+          {/* Profile Photo Avatar */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="relative mb-6 group"
+          >
+            <div className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 opacity-25 blur-xl group-hover:opacity-50 transition duration-500" />
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden bg-neutral-950 shadow-2xl shadow-cyan-500/20">
+              <Image
+                src="/images/profile.png"
+                alt="Venuja Silva"
+                fill
+                priority
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 640px) 128px, 160px"
+              />
+            </div>
+          </motion.div>
 
           {/* Name & Headline */}
           <motion.h1
