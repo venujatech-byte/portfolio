@@ -65,12 +65,12 @@ export default function Hero() {
           {/* Headline */}
           <h1 className="mt-6 text-[2.6rem] leading-[0.96] font-bold sm:text-6xl xl:text-7xl tracking-tight text-white">
             Hi, I&apos;m Venuja Silva. <br />
-            <span className="text-blue-500">Engineering Software &amp; Connected Systems</span>
+
           </h1>
 
           {/* Subtitle */}
           <p className="text-neutral-300 font-mono text-xs sm:text-sm tracking-wide mt-6">
-            Team Leader &amp; Frontend Engineer @ Vendly.lk
+            Team Leader &amp; Full-Stack Engineer @ Vendly.lk
             <span className="text-blue-500 mx-2">|</span>
             IoT &amp; Systems Developer
           </p>

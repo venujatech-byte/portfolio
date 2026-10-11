@@ -13,7 +13,7 @@ export default function Experience() {
   const experiences = [
     {
       num: "01",
-      title: "Team Leader & Frontend Engineer",
+      title: "Team Leader & Full-Stack Engineer",
       organization: "Vendly.lk",
       period: "July 2026 – Sept 2026",
       type: "Project Leadership & Engineering",

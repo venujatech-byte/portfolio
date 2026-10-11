@@ -96,9 +96,9 @@ export default function About() {
               </p>
               <p className="text-neutral-400 text-sm sm:text-base leading-relaxed mb-5">
                 My work spans the full engineering spectrum. As the{" "}
-                <span className="text-white font-medium">Team Leader &amp; Frontend Engineer on Vendly.lk</span>,
-                I spearheaded our team&apos;s product development: architecting the user flows and wireframes in
-                Figma, structuring modular React frontend components, integrating Firebase and Flask services,
+                <span className="text-white font-medium">Team Leader &amp; Full-Stack Engineer on Vendly.lk</span>,
+                I spearheaded our team&apos;s product development: architecting user flows and wireframes in
+                Figma, structuring modular React frontend and Flask backend services, integrating Firebase databases,
                 and maintaining our GitHub development roadmap.
               </p>
               <p className="text-neutral-400 text-sm sm:text-base leading-relaxed mb-5">
