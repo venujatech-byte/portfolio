@@ -2,12 +2,9 @@
 
 import { motion } from "framer-motion";
 import {
-  Code,
   Smartphone,
   Cpu,
-  Bot,
   Users,
-  Palette,
   CheckCircle2,
   FolderGit2,
 } from "lucide-react";
@@ -18,25 +15,25 @@ export default function About() {
       title: "6+ Projects",
       subtitle: "Full-stack web, IoT, and desktop utilities",
       icon: FolderGit2,
-      color: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
+      color: "text-cyan-400 bg-cyan-500/10",
     },
     {
       title: "Web & Mobile",
       subtitle: "React, Next.js, and responsive digital apps",
       icon: Smartphone,
-      color: "text-blue-400 bg-blue-500/10 border-blue-500/20",
+      color: "text-blue-400 bg-blue-500/10",
     },
     {
       title: "IoT & Embedded",
       subtitle: "ESP32, Arduino, sensors & hardware automation",
       icon: Cpu,
-      color: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+      color: "text-emerald-400 bg-emerald-500/10",
     },
     {
       title: "Team Leadership",
       subtitle: "Led engineering & UI/UX delivery on Vendly.lk",
       icon: Users,
-      color: "text-violet-400 bg-violet-500/10 border-violet-500/20",
+      color: "text-violet-400 bg-violet-500/10",
     },
   ];
 
@@ -60,7 +57,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center mb-16"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
             About Me
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
@@ -79,7 +76,7 @@ export default function About() {
             className="lg:col-span-7 flex flex-col gap-6"
           >
             <div className="p-6 sm:p-8 rounded-2xl relative overflow-hidden"
-              style={{ background: "rgba(13,20,38,0.70)", boxShadow: "0 8px 32px -8px rgba(0,0,0,0.5)" }}
+              style={{ background: "rgba(18,18,20,0.75)", boxShadow: "0 10px 32px -10px rgba(0,0,0,0.7)" }}
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 blur-3xl rounded-full pointer-events-none" />
               <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
@@ -108,7 +105,7 @@ export default function About() {
 
             {/* Core Competencies Checklist */}
             <div className="p-6 sm:p-7 rounded-2xl"
-              style={{ background: "rgba(13,20,38,0.70)", boxShadow: "0 8px 32px -8px rgba(0,0,0,0.5)" }}
+              style={{ background: "rgba(18,18,20,0.75)", boxShadow: "0 10px 32px -10px rgba(0,0,0,0.7)" }}
             >
               <h4 className="text-sm font-semibold text-slate-200 uppercase tracking-wider mb-4">
                 Hands-On Experience Across
@@ -139,7 +136,7 @@ export default function About() {
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="p-5 rounded-xl flex items-start gap-4 transition-all duration-300 hover:translate-y-[-2px]"
-                  style={{ background: "rgba(13,20,38,0.70)", boxShadow: "0 4px 20px -6px rgba(0,0,0,0.5)" }}
+                  style={{ background: "rgba(18,18,20,0.75)", boxShadow: "0 6px 24px -8px rgba(0,0,0,0.6)" }}
                 >
                   <div
                     className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${item.color}`}
@@ -164,8 +161,8 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="p-5 rounded-xl border-l-4 border-l-cyan-500"
-              style={{ background: "linear-gradient(90deg, rgba(6,182,212,0.07) 0%, rgba(13,20,38,0.40) 100%)" }}
+              className="p-5 rounded-xl relative overflow-hidden"
+              style={{ background: "linear-gradient(90deg, rgba(6,182,212,0.12) 0%, rgba(18,18,20,0.75) 100%)", boxShadow: "0 4px 20px -6px rgba(0,0,0,0.6)" }}
             >
               <p className="text-xs sm:text-sm text-slate-300 italic">
                 &ldquo;Great software isn&apos;t just code that runs—it is thoughtful design,

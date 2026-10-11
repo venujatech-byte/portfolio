@@ -64,8 +64,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
           className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl z-10 p-7 sm:p-9"
           style={{
-            background: "linear-gradient(160deg, rgba(11,18,36,0.98) 0%, rgba(8,13,26,0.99) 100%)",
-            boxShadow: "0 40px 100px -20px rgba(0,0,0,0.85), 0 0 80px -30px rgba(6,182,212,0.12)",
+            background: "linear-gradient(160deg, rgba(18,18,20,0.98) 0%, rgba(8,8,10,0.99) 100%)",
+            boxShadow: "0 40px 100px -20px rgba(0,0,0,0.95), 0 0 80px -30px rgba(6,182,212,0.15)",
           }}
         >
           {/* Ambient glow */}
@@ -120,13 +120,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               sizes="(max-width: 768px) 100vw, 800px"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#08111f]/50 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
           </div>
 
           {/* Action Links Bar */}
-          <div className="flex flex-wrap items-center gap-3 pb-6 mb-6 relative z-10"
-            style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
-          >
+          <div className="flex flex-wrap items-center gap-3 pb-6 mb-6 relative z-10">
             {project.links.map((link) => {
               if (link.type === "details") return null;
               return (

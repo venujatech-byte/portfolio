@@ -7,7 +7,6 @@ import {
   Phone,
   Send,
   CheckCircle2,
-  AlertCircle,
   Copy,
   Check,
 } from "lucide-react";
@@ -70,7 +69,7 @@ export default function Contact() {
             className="lg:col-span-5 flex flex-col gap-6"
           >
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
                 Get In Touch
               </div>
               <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
@@ -86,9 +85,9 @@ export default function Contact() {
             {/* Direct Contact Cards */}
             <div className="space-y-3 pt-2">
               {/* Email Card with Copy button */}
-              <div className="glass-panel p-4 rounded-xl border border-white/10 flex items-center justify-between gap-3">
+              <div className="glass-panel p-4 rounded-xl flex items-center justify-between gap-3 shadow-md shadow-black/40">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                  <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -106,7 +105,7 @@ export default function Contact() {
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors"
+                  className="p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-slate-400 hover:text-white transition-colors"
                   title="Copy email to clipboard"
                   aria-label="Copy email"
                 >
@@ -119,9 +118,9 @@ export default function Contact() {
               </div>
 
               {/* Phone / Contact Card */}
-              <div className="glass-panel p-4 rounded-xl border border-white/10 flex items-center justify-between gap-3">
+              <div className="glass-panel p-4 rounded-xl flex items-center justify-between gap-3 shadow-md shadow-black/40">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                  <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -139,7 +138,7 @@ export default function Contact() {
                 <button
                   type="button"
                   onClick={handleCopyPhone}
-                  className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors"
+                  className="p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-slate-400 hover:text-white transition-colors"
                   title="Copy phone number to clipboard"
                   aria-label="Copy phone"
                 >
@@ -156,9 +155,9 @@ export default function Contact() {
                 href={gitHubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-panel p-4 rounded-xl border border-white/10 flex items-center gap-3 hover:border-cyan-500/30 transition-all group"
+                className="glass-panel p-4 rounded-xl flex items-center gap-3 shadow-md shadow-black/40 hover:bg-neutral-800/60 transition-all group"
               >
-                <div className="w-10 h-10 rounded-lg bg-slate-800 border border-white/10 flex items-center justify-center text-slate-300 group-hover:text-white">
+                <div className="w-10 h-10 rounded-lg bg-neutral-800 flex items-center justify-center text-slate-300 group-hover:text-white">
                   <Github className="w-5 h-5" />
                 </div>
                 <div>
@@ -174,9 +173,9 @@ export default function Contact() {
                 href={linkedInUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-panel p-4 rounded-xl border border-white/10 flex items-center gap-3 hover:border-cyan-500/30 transition-all group"
+                className="glass-panel p-4 rounded-xl flex items-center gap-3 shadow-md shadow-black/40 hover:bg-neutral-800/60 transition-all group"
               >
-                <div className="w-10 h-10 rounded-lg bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 group-hover:text-white">
+                <div className="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center text-blue-400 group-hover:text-white">
                   <Linkedin className="w-5 h-5" />
                 </div>
                 <div>
@@ -199,7 +198,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="lg:col-span-7"
           >
-            <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 relative shadow-xl">
+            <div className="glass-panel p-6 sm:p-8 rounded-2xl relative shadow-2xl shadow-black/80">
               <h3 className="text-xl font-bold text-white mb-2">Send a Message</h3>
               <p className="text-xs sm:text-sm text-slate-400 mb-6">
                 Have a question or a project proposal? Fill out the form below.
@@ -209,7 +208,7 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="p-6 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-center"
+                  className="p-6 rounded-xl bg-emerald-950/30 text-center"
                 >
                   <CheckCircle2 className="w-10 h-10 text-emerald-400 mx-auto mb-3" />
                   <h4 className="text-base font-bold text-white mb-1">Message Received!</h4>
@@ -219,7 +218,7 @@ export default function Contact() {
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="px-4 py-2 rounded-lg text-xs font-semibold bg-slate-800 text-slate-200 hover:text-white transition-colors"
+                    className="px-4 py-2 rounded-lg text-xs font-semibold bg-neutral-800 text-slate-200 hover:text-white transition-colors"
                   >
                     Send Another Message
                   </button>
@@ -240,7 +239,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Alex Mercer"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm transition-colors"
+                      className="w-full px-4 py-3 rounded-xl border-0 bg-neutral-900/90 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 text-sm transition-all shadow-inner"
                     />
                   </div>
 
@@ -258,7 +257,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. alex@example.com"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm transition-colors"
+                      className="w-full px-4 py-3 rounded-xl border-0 bg-neutral-900/90 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 text-sm transition-all shadow-inner"
                     />
                   </div>
 
@@ -276,7 +275,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell me about your project, idea, or question..."
-                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl border-0 bg-neutral-900/90 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 text-sm transition-all shadow-inner resize-none"
                     />
                   </div>
 

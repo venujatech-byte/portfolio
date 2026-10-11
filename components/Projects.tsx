@@ -45,7 +45,7 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center mb-12"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
             Portfolio Showcase
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
@@ -66,7 +66,7 @@ export default function Projects() {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="flex items-center justify-center mb-12 overflow-x-auto pb-2 scrollbar-none"
         >
-          <div className="flex items-center gap-1.5 p-1.5 rounded-2xl shadow-lg" style={{ background: "rgba(13,20,38,0.65)" }}>
+          <div className="flex items-center gap-1.5 p-1.5 rounded-2xl shadow-xl shadow-black/80" style={{ background: "rgba(18,18,20,0.85)" }}>
             {filterOptions.map((category) => {
               const isActive = activeFilter === category;
               return (

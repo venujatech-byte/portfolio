@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import {
   Lightbulb,
-  Palette,
   Code2,
   Database,
   GitBranch,
@@ -12,7 +11,6 @@ import {
   Radio,
   CloudLightning,
   Bell,
-  ArrowRight,
 } from "lucide-react";
 import { Figma } from "@/components/BrandIcons";
 
@@ -23,42 +21,42 @@ export default function Workflow() {
       tech: "Figma",
       desc: "User journey mapping, wireframing, and creating atomic design tokens.",
       icon: Figma,
-      color: "text-purple-400 border-purple-500/30 bg-purple-500/10",
+      color: "text-purple-400 bg-purple-500/10",
     },
     {
       title: "2. Frontend UI",
       tech: "React / Next.js",
       desc: "Component-driven development with responsive CSS & stateful data flows.",
       icon: Code2,
-      color: "text-cyan-400 border-cyan-500/30 bg-cyan-500/10",
+      color: "text-cyan-400 bg-cyan-500/10",
     },
     {
       title: "3. API & Logic",
       tech: "Flask / REST",
       desc: "Clean backend route architecture, data validation, and business logic.",
       icon: Database,
-      color: "text-blue-400 border-blue-500/30 bg-blue-500/10",
+      color: "text-blue-400 bg-blue-500/10",
     },
     {
       title: "4. Data Cloud",
       tech: "Firebase / Firestore",
       desc: "Real-time document persistence, auth states, and cloud storage.",
       icon: CloudLightning,
-      color: "text-amber-400 border-amber-500/30 bg-amber-500/10",
+      color: "text-amber-400 bg-amber-500/10",
     },
     {
       title: "5. Code Review",
       tech: "GitHub",
       desc: "Branching strategies, pull request reviews, and continuous integration.",
       icon: GitBranch,
-      color: "text-slate-300 border-slate-500/30 bg-slate-500/10",
+      color: "text-slate-300 bg-slate-500/10",
     },
     {
       title: "6. Deployment",
       tech: "Vercel",
       desc: "Edge-distributed static and serverless hosting with preview environments.",
       icon: Rocket,
-      color: "text-emerald-400 border-emerald-500/30 bg-emerald-500/10",
+      color: "text-emerald-400 bg-emerald-500/10",
     },
   ];
 
@@ -112,7 +110,7 @@ export default function Workflow() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center mb-16"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
             Engineering Methodology
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
@@ -128,7 +126,7 @@ export default function Workflow() {
         {/* Track 1: Web & Digital Product Pipeline */}
         <div className="mb-14">
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+            <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
               <Rocket className="w-5 h-5" />
             </div>
             <div>
@@ -151,10 +149,10 @@ export default function Workflow() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.08 }}
-                  className="glass-panel glass-panel-hover p-4 rounded-xl flex flex-col justify-between border border-white/10 relative"
+                  className="glass-panel glass-panel-hover p-4 rounded-xl flex flex-col justify-between relative"
                 >
                   <div>
-                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center border ${step.color} mb-3`}>
+                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${step.color} mb-3`}>
                       <IconComponent className="w-4 h-4" />
                     </div>
                     <span className="text-[11px] font-mono text-cyan-400 uppercase tracking-wider block mb-1">
@@ -176,7 +174,7 @@ export default function Workflow() {
         {/* Track 2: Embedded IoT & Hardware Systems Pipeline */}
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+            <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
               <Cpu className="w-5 h-5" />
             </div>
             <div>
@@ -199,10 +197,10 @@ export default function Workflow() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.08 }}
-                  className="glass-panel glass-panel-hover p-4 rounded-xl flex flex-col justify-between border border-white/10"
+                  className="glass-panel glass-panel-hover p-4 rounded-xl flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-9 h-9 rounded-lg flex items-center justify-center border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 mb-3">
+                    <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-emerald-500/10 text-emerald-400 mb-3">
                       <IconComponent className="w-4 h-4" />
                     </div>
                     <span className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider block mb-1">
@@ -211,7 +209,7 @@ export default function Workflow() {
                     <h4 className="text-sm font-semibold text-white mb-2">
                       {step.title}
                     </h4>
-                    <span className="inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-slate-900 text-slate-300 border border-white/5 mb-2">
+                    <span className="inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-900 text-neutral-300 mb-2">
                       {step.tech}
                     </span>
                     <p className="text-xs text-slate-400 leading-relaxed">

@@ -2,12 +2,8 @@
 
 import { motion } from "framer-motion";
 import {
-  Briefcase,
-  Users,
   CheckCircle2,
   Calendar,
-  Layers,
-  Cpu,
   ExternalLink,
 } from "lucide-react";
 import { Github } from "@/components/BrandIcons";
@@ -85,7 +81,7 @@ export default function Experience() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center mb-16"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
             Roles &amp; Experience
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
@@ -99,7 +95,7 @@ export default function Experience() {
         </motion.div>
 
         {/* Timeline */}
-        <div className="relative border-l-2 border-slate-800 ml-4 md:ml-32 space-y-12">
+        <div className="relative ml-4 md:ml-32 space-y-12 before:absolute before:left-[-1px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gradient-to-b before:from-cyan-500/40 before:via-neutral-800/80 before:to-transparent">
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.title}
@@ -110,17 +106,17 @@ export default function Experience() {
               className="relative pl-6 sm:pl-8 group"
             >
               {/* Timeline Indicator Dot */}
-              <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-900 border-2 border-cyan-400 group-hover:bg-cyan-400 transition-colors shadow-sm shadow-cyan-400/50" />
+              <div className="absolute -left-[8px] top-2 w-3.5 h-3.5 rounded-full bg-cyan-400 shadow-md shadow-cyan-400/50 group-hover:scale-125 transition-transform" />
 
               {/* Card */}
               <div
                 className="p-6 sm:p-8 rounded-2xl"
                 style={exp.featured ? {
-                  background: "rgba(12,19,38,0.88)",
-                  boxShadow: "0 16px 48px -12px rgba(0,0,0,0.65), 0 0 40px -20px rgba(6,182,212,0.12)"
+                  background: "rgba(18,18,20,0.85)",
+                  boxShadow: "0 16px 48px -12px rgba(0,0,0,0.85), 0 0 40px -20px rgba(6,182,212,0.15)"
                 } : {
-                  background: "rgba(12,19,38,0.75)",
-                  boxShadow: "0 8px 32px -8px rgba(0,0,0,0.55)"
+                  background: "rgba(18,18,20,0.75)",
+                  boxShadow: "0 8px 32px -8px rgba(0,0,0,0.7)"
                 }}
               >
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
@@ -167,7 +163,7 @@ export default function Experience() {
 
                 {/* Links */}
                 {exp.links && exp.links.length > 0 && (
-                  <div className="flex flex-wrap items-center gap-3 pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+                  <div className="flex flex-wrap items-center gap-3 pt-4">
                     {exp.links.map((link) => (
                       <a
                         key={link.label}

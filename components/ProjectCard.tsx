@@ -30,8 +30,8 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
         transition={{ duration: 0.45 }}
         className="w-full rounded-3xl overflow-hidden relative group mb-10"
         style={{
-          background: "linear-gradient(135deg, rgba(14,22,42,0.92) 0%, rgba(10,15,28,0.97) 100%)",
-          boxShadow: "0 32px 80px -20px rgba(0,0,0,0.7), 0 8px 32px -8px rgba(6,182,212,0.12)",
+          background: "linear-gradient(135deg, rgba(18,18,20,0.95) 0%, rgba(10,10,12,0.98) 100%)",
+          boxShadow: "0 32px 80px -20px rgba(0,0,0,0.85), 0 0 40px -10px rgba(6,182,212,0.15)",
         }}
       >
         {/* Ambient glow accents */}
@@ -186,12 +186,12 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
       transition={{ duration: 0.35 }}
       className="rounded-2xl overflow-hidden flex flex-col justify-between relative group transition-all duration-350"
       style={{
-        background: "linear-gradient(160deg, rgba(13,20,38,0.88) 0%, rgba(9,14,26,0.95) 100%)",
-        boxShadow: "0 8px 32px -8px rgba(0,0,0,0.6)",
+        background: "linear-gradient(160deg, rgba(18,18,20,0.9) 0%, rgba(10,10,12,0.95) 100%)",
+        boxShadow: "0 10px 32px -8px rgba(0,0,0,0.75)",
       }}
       whileHover={{
         y: -4,
-        boxShadow: "0 24px 60px -12px rgba(0,0,0,0.7), 0 0 40px -16px rgba(6,182,212,0.15)",
+        boxShadow: "0 24px 60px -12px rgba(0,0,0,0.9), 0 0 40px -16px rgba(6,182,212,0.2)",
       }}
     >
       {/* Ambient glow */}
@@ -221,7 +221,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
             </span>
           </div>
           {/* bottom fade */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#09101a] via-transparent to-transparent opacity-60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
         </div>
 
         {/* Content */}
@@ -258,9 +258,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
           </div>
 
           {/* Action Buttons */}
-          <div className="pt-3 flex items-center justify-between gap-2"
-            style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
-          >
+          <div className="pt-3 flex items-center justify-between gap-2">
             <button
               onClick={() => onSelect(project)}
               className="inline-flex items-center gap-1 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"

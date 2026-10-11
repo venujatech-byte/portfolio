@@ -7,7 +7,6 @@ import {
   Layers,
   Cpu,
   Smartphone,
-  Sparkles,
   Terminal,
   Bot,
 } from "lucide-react";
@@ -15,11 +14,11 @@ import { Github, Linkedin } from "@/components/BrandIcons";
 
 export default function Hero() {
   const domains = [
-    { label: "Web Apps", icon: Layers, color: "text-cyan-400 border-cyan-500/20 bg-cyan-500/10" },
-    { label: "Mobile Apps", icon: Smartphone, color: "text-blue-400 border-blue-500/20 bg-blue-500/10" },
-    { label: "IoT & Embedded", icon: Cpu, color: "text-emerald-400 border-emerald-500/20 bg-emerald-500/10" },
-    { label: "AI Integration", icon: Bot, color: "text-violet-400 border-violet-500/20 bg-violet-500/10" },
-    { label: "Dev Tools", icon: Terminal, color: "text-amber-400 border-amber-500/20 bg-amber-500/10" },
+    { label: "Web Apps", icon: Layers, color: "text-cyan-400 bg-cyan-500/10" },
+    { label: "Mobile Apps", icon: Smartphone, color: "text-blue-400 bg-blue-500/10" },
+    { label: "IoT & Embedded", icon: Cpu, color: "text-emerald-400 bg-emerald-500/10" },
+    { label: "AI Integration", icon: Bot, color: "text-violet-400 bg-violet-500/10" },
+    { label: "Dev Tools", icon: Terminal, color: "text-amber-400 bg-amber-500/10" },
   ];
 
   return (
@@ -89,19 +88,19 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm border border-slate-700/80 backdrop-blur-md transition-all hover:scale-105 active:scale-95"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900/90 hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold text-sm backdrop-blur-md transition-all hover:scale-105 active:scale-95 shadow-md shadow-black/40"
             >
               Contact Me
               <Send className="w-4 h-4 text-cyan-400" />
             </a>
 
             {/* Social Badges */}
-            <div className="flex items-center gap-2 pl-2 sm:border-l sm:border-slate-800">
+            <div className="flex items-center gap-2 pl-1">
               <a
                 href="https://github.com/venujatech-byte"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 transition-all hover:scale-105"
+                className="p-3 rounded-xl bg-neutral-900/90 hover:bg-neutral-800 text-neutral-300 hover:text-white transition-all hover:scale-105 shadow-sm shadow-black/30"
                 aria-label="Venuja Silva GitHub"
               >
                 <Github className="w-5 h-5" />
@@ -110,7 +109,7 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/contact-venuja-silva"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 transition-all hover:scale-105"
+                className="p-3 rounded-xl bg-neutral-900/90 hover:bg-neutral-800 text-neutral-300 hover:text-white transition-all hover:scale-105 shadow-sm shadow-black/30"
                 aria-label="Venuja Silva LinkedIn"
                 title="LinkedIn Profile"
               >
@@ -131,7 +130,7 @@ export default function Hero() {
               return (
                 <div
                   key={domain.label}
-                  className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border text-xs font-medium ${domain.color} backdrop-blur-sm transition-transform hover:-translate-y-0.5`}
+                  className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium ${domain.color} backdrop-blur-sm transition-transform hover:-translate-y-0.5`}
                 >
                   <IconComponent className="w-3.5 h-3.5" />
                   <span>{domain.label}</span>

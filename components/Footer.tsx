@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUp, Heart } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { Github, Linkedin } from "@/components/BrandIcons";
 
 export default function Footer() {
@@ -11,7 +11,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/5 bg-slate-950/80 backdrop-blur-md py-12 relative z-10">
+    <footer className="bg-black/90 backdrop-blur-md py-12 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand & Tagline */}
@@ -45,7 +45,7 @@ export default function Footer() {
               href="https://github.com/venujatech-byte"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
+              className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-neutral-800 transition-colors"
               aria-label="GitHub"
             >
               <Github className="w-4 h-4" />
@@ -54,14 +54,14 @@ export default function Footer() {
               href="https://www.linkedin.com/in/contact-venuja-silva"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
+              className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-neutral-800 transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-4 h-4" />
             </a>
             <button
               onClick={scrollToTop}
-              className="p-2 text-slate-400 hover:text-cyan-400 rounded-lg hover:bg-slate-800 border border-white/5 transition-colors flex items-center gap-1.5 text-xs"
+              className="p-2 text-slate-400 hover:text-cyan-400 rounded-lg hover:bg-neutral-800 transition-colors flex items-center gap-1.5 text-xs shadow-sm shadow-black/40"
               aria-label="Back to top"
             >
               <ArrowUp className="w-4 h-4" />
@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright notice */}
-        <div className="mt-8 pt-6 border-t border-white/5 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="mt-8 pt-6 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>© {currentYear} Venuja Silva. All rights reserved.</span>
           <span>Designed with Next.js, TypeScript &amp; Tailwind CSS</span>
         </div>

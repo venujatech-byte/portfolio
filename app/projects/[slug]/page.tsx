@@ -113,13 +113,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               sizes="(max-width: 1024px) 100vw, 1000px"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#07090e]/50 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
           </div>
 
           {/* Action Links Bar */}
-          <div className="flex flex-wrap items-center gap-3 pb-8 mb-8"
-            style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
-          >
+          <div className="flex flex-wrap items-center gap-3 pb-8 mb-8">
             {project.links
               .filter((l) => l.type !== "details")
               .map((link) => (

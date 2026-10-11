@@ -43,7 +43,7 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center mb-16"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
             Technical Stack
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
@@ -66,7 +66,7 @@ export default function Skills() {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
               className="p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:translate-y-[-3px]"
-              style={{ background: "rgba(13,20,38,0.72)", boxShadow: "0 6px 28px -8px rgba(0,0,0,0.55)" }}
+              style={{ background: "rgba(18,18,20,0.75)", boxShadow: "0 10px 30px -10px rgba(0,0,0,0.7)" }}
             >
               <div>
                 {/* Category Header */}
@@ -108,7 +108,7 @@ export default function Skills() {
 
               {/* Bottom Subtle Note for AI category */}
               {category.id === "ai-systems" && (
-                <div className="mt-5 pt-3 border-t border-slate-800/80">
+                <div className="mt-5 pt-3">
                   <span className="text-[11px] text-slate-400 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-violet-400 inline-block" />
                     Focused on practical integrations and edge deployment

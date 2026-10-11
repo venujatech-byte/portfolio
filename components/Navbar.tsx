@@ -58,7 +58,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 p-1.5 rounded-full backdrop-blur-md" style={{ background: "rgba(15,23,42,0.55)" }}>
+          <nav className="hidden md:flex items-center gap-1 p-1.5 rounded-full backdrop-blur-md" style={{ background: "rgba(22,22,24,0.7)" }}>
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -130,7 +130,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden glass-nav border-b border-white/10 px-4 py-5"
+            className="md:hidden glass-nav px-4 py-5"
           >
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
@@ -143,7 +143,7 @@ export default function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <div className="pt-3 mt-2 border-t border-slate-800 flex items-center gap-4">
+              <div className="pt-3 mt-2 flex items-center gap-4">
                 <a
                   href="https://github.com/venujatech-byte"
                   target="_blank"
