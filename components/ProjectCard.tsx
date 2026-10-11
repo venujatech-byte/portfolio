@@ -30,8 +30,8 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
         transition={{ duration: 0.45 }}
         className="w-full rounded-3xl overflow-hidden relative group mb-10"
         style={{
-          background: "linear-gradient(135deg, rgba(18,18,20,0.95) 0%, rgba(10,10,12,0.98) 100%)",
-          boxShadow: "0 32px 80px -20px rgba(0,0,0,0.85), 0 0 40px -10px rgba(6,182,212,0.15)",
+          background: "linear-gradient(135deg, rgba(14,14,16,0.95) 0%, rgba(6,6,8,0.98) 100%)",
+          boxShadow: "0 32px 80px -20px rgba(0,0,0,0.95), 0 0 40px -10px rgba(6,182,212,0.15)",
         }}
       >
         {/* Ambient glow accents */}
@@ -186,8 +186,8 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
       transition={{ duration: 0.35 }}
       className="rounded-2xl overflow-hidden flex flex-col justify-between relative group transition-all duration-350"
       style={{
-        background: "linear-gradient(160deg, rgba(18,18,20,0.9) 0%, rgba(10,10,12,0.95) 100%)",
-        boxShadow: "0 10px 32px -8px rgba(0,0,0,0.75)",
+        background: "linear-gradient(160deg, rgba(14,14,16,0.92) 0%, rgba(6,6,8,0.96) 100%)",
+        boxShadow: "0 10px 32px -8px rgba(0,0,0,0.85)",
       }}
       whileHover={{
         y: -4,

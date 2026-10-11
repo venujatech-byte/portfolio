@@ -112,11 +112,11 @@ export default function Experience() {
               <div
                 className="p-6 sm:p-8 rounded-2xl"
                 style={exp.featured ? {
-                  background: "rgba(18,18,20,0.85)",
-                  boxShadow: "0 16px 48px -12px rgba(0,0,0,0.85), 0 0 40px -20px rgba(6,182,212,0.15)"
+                  background: "rgba(12,12,14,0.88)",
+                  boxShadow: "0 16px 48px -12px rgba(0,0,0,0.95), 0 0 40px -20px rgba(6,182,212,0.15)"
                 } : {
-                  background: "rgba(18,18,20,0.75)",
-                  boxShadow: "0 8px 32px -8px rgba(0,0,0,0.7)"
+                  background: "rgba(12,12,14,0.8)",
+                  boxShadow: "0 8px 32px -8px rgba(0,0,0,0.85)"
                 }}
               >
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">

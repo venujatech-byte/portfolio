@@ -76,7 +76,7 @@ export default function About() {
             className="lg:col-span-7 flex flex-col gap-6"
           >
             <div className="p-6 sm:p-8 rounded-2xl relative overflow-hidden"
-              style={{ background: "rgba(18,18,20,0.75)", boxShadow: "0 10px 32px -10px rgba(0,0,0,0.7)" }}
+              style={{ background: "rgba(12,12,14,0.8)", boxShadow: "0 10px 32px -10px rgba(0,0,0,0.85)" }}
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 blur-3xl rounded-full pointer-events-none" />
               <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
@@ -105,7 +105,7 @@ export default function About() {
 
             {/* Core Competencies Checklist */}
             <div className="p-6 sm:p-7 rounded-2xl"
-              style={{ background: "rgba(18,18,20,0.75)", boxShadow: "0 10px 32px -10px rgba(0,0,0,0.7)" }}
+              style={{ background: "rgba(12,12,14,0.8)", boxShadow: "0 10px 32px -10px rgba(0,0,0,0.85)" }}
             >
               <h4 className="text-sm font-semibold text-slate-200 uppercase tracking-wider mb-4">
                 Hands-On Experience Across
@@ -136,7 +136,7 @@ export default function About() {
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="p-5 rounded-xl flex items-start gap-4 transition-all duration-300 hover:translate-y-[-2px]"
-                  style={{ background: "rgba(18,18,20,0.75)", boxShadow: "0 6px 24px -8px rgba(0,0,0,0.6)" }}
+                  style={{ background: "rgba(12,12,14,0.8)", boxShadow: "0 6px 24px -8px rgba(0,0,0,0.8)" }}
                 >
                   <div
                     className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${item.color}`}
@@ -162,7 +162,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
               className="p-5 rounded-xl relative overflow-hidden"
-              style={{ background: "linear-gradient(90deg, rgba(6,182,212,0.12) 0%, rgba(18,18,20,0.75) 100%)", boxShadow: "0 4px 20px -6px rgba(0,0,0,0.6)" }}
+              style={{ background: "linear-gradient(90deg, rgba(6,182,212,0.12) 0%, rgba(12,12,14,0.8) 100%)", boxShadow: "0 4px 20px -6px rgba(0,0,0,0.8)" }}
             >
               <p className="text-xs sm:text-sm text-slate-300 italic">
                 &ldquo;Great software isn&apos;t just code that runs—it is thoughtful design,

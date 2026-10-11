@@ -66,7 +66,7 @@ export default function Skills() {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
               className="p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:translate-y-[-3px]"
-              style={{ background: "rgba(18,18,20,0.75)", boxShadow: "0 10px 30px -10px rgba(0,0,0,0.7)" }}
+              style={{ background: "rgba(12,12,14,0.8)", boxShadow: "0 10px 30px -10px rgba(0,0,0,0.85)" }}
             >
               <div>
                 {/* Category Header */}

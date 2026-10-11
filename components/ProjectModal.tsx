@@ -64,8 +64,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
           className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl z-10 p-7 sm:p-9"
           style={{
-            background: "linear-gradient(160deg, rgba(18,18,20,0.98) 0%, rgba(8,8,10,0.99) 100%)",
-            boxShadow: "0 40px 100px -20px rgba(0,0,0,0.95), 0 0 80px -30px rgba(6,182,212,0.15)",
+            background: "linear-gradient(160deg, rgba(12,12,14,0.98) 0%, rgba(6,6,8,0.99) 100%)",
+            boxShadow: "0 40px 100px -20px rgba(0,0,0,0.98), 0 0 80px -30px rgba(6,182,212,0.15)",
           }}
         >
           {/* Ambient glow */}

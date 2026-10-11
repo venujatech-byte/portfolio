@@ -77,12 +77,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark`}
+      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark bg-black`}
     >
       <body className="min-h-screen bg-black text-zinc-100 antialiased selection:bg-cyan-500 selection:text-white relative">
         <ScrollProgress />
-        <div className="fixed inset-0 pointer-events-none bg-grid-pattern opacity-60 z-0" />
-        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-radial-glow pointer-events-none z-0" />
         <div className="relative z-10 flex min-h-screen flex-col">
           {children}
         </div>

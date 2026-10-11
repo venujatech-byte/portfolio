@@ -58,7 +58,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 p-1.5 rounded-full backdrop-blur-md" style={{ background: "rgba(22,22,24,0.7)" }}>
+          <nav className="hidden md:flex items-center gap-1 p-1.5 rounded-full backdrop-blur-md" style={{ background: "rgba(12,12,14,0.85)" }}>
             {navLinks.map((link) => (
               <a
                 key={link.name}
