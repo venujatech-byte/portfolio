@@ -124,17 +124,6 @@ export default function About() {
                 ))}
               </div>
             </div>
-
-            {/* Quote Block */}
-            <div className="surface-card p-6 border-l-2 border-l-blue-600">
-              <p className="text-sm text-neutral-300 italic leading-relaxed">
-                &ldquo;Great software isn&apos;t just code that runs—it is thoughtful design,
-                dependable architecture, and practical value for the people who rely on it.&rdquo;
-              </p>
-              <span className="block mt-3 text-xs font-mono font-semibold text-blue-400">
-                — Venuja Silva
-              </span>
-            </div>
           </motion.div>
 
           {/* Right Column: The Through-Line (Inspired by Pahan's site) */}
