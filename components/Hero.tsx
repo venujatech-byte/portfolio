@@ -35,7 +35,7 @@ export default function Hero() {
             alt="Portrait of Venuja Silva"
             fill
             priority
-            className="object-cover object-[left_center]"
+            className="object-cover object-left"
             sizes="100vw"
           />
         </div>
