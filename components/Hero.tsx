@@ -31,7 +31,7 @@ export default function Hero() {
         {/* Desktop View: Full-bleed image across background, left-aligned, right side pure black */}
         <div className="hidden lg:block relative w-full h-full">
           <Image
-            src="/images/hero-portrait-v3.png"
+            src="/images/hero-portrait-v4.png"
             alt="Portrait of Venuja Silva"
             fill
             priority
@@ -43,7 +43,7 @@ export default function Hero() {
         {/* Mobile View: 16:9 aspect image showing Venuja clearly on top */}
         <div className="block lg:hidden relative w-full aspect-video">
           <Image
-            src="/images/hero-portrait-v3.png"
+            src="/images/hero-portrait-v4.png"
             alt="Portrait of Venuja Silva"
             fill
             priority
