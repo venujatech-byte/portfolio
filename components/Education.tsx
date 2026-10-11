@@ -8,16 +8,11 @@ import {
   Award,
   ChevronDown,
   ChevronUp,
-  Building2,
-  Phone,
-  Mail,
-  MapPin,
   Bot,
   FlaskConical,
   Lightbulb,
   TreePine,
   ShieldCheck,
-  UserCheck,
 } from "lucide-react";
 
 export default function Education() {
@@ -80,25 +75,6 @@ export default function Education() {
     },
   ];
 
-  const references = [
-    {
-      name: "Mrs. Samanthi Senanayake",
-      designation: "Deputy General Manager – Compliance",
-      organization: "People's Bank Head Office",
-      address: "Level 8, People's Tower, 374, Dr. Colvin R De Silva Mawatha, Colombo 02",
-      phone: "+94 70 330 1941",
-      email: "samanthis@peoplesbank.lk",
-    },
-    {
-      name: "Mr. M.A. Sumanthiran",
-      designation: "President's Counsel & Former Member of Parliament",
-      organization: "Law Chambers",
-      address: "3/1, Daya Road, Colombo 06",
-      phone: "+94 77 731 4628",
-      email: "ma.sumanthiran@gmail.com",
-    },
-  ];
-
   return (
     <section id="education" className="py-24 md:py-32 relative bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,7 +95,7 @@ export default function Education() {
           </h2>
           <p className="text-neutral-400 text-sm sm:text-base max-w-2xl mt-4 leading-relaxed">
             Formal computer science degree, project-based induction program, secondary education
-            at Nalanda College Colombo, extracurriculars, and verified professional references.
+            at Nalanda College Colombo, and extracurricular leadership.
           </p>
         </motion.div>
 
@@ -344,63 +320,6 @@ export default function Education() {
           </div>
         </div>
 
-        {/* Professional References */}
-        <div>
-          <div className="flex items-center gap-3 mb-6">
-            <span className="rule-accent" />
-            <h3 className="text-lg font-bold text-white tracking-tight">
-              Verified Professional References
-            </h3>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {references.map((ref, idx) => (
-              <motion.div
-                key={ref.name}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="surface-card p-6 sm:p-8"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="p-2.5 rounded-xl bg-neutral-900 border border-neutral-800 shrink-0">
-                    <UserCheck className="w-5 h-5 text-blue-400" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-white">{ref.name}</h4>
-                    <p className="text-xs text-blue-400 font-medium mt-0.5">{ref.designation}</p>
-                    <p className="text-xs text-neutral-400 flex items-center gap-1.5 mt-1.5">
-                      <Building2 className="w-3.5 h-3.5 shrink-0 text-neutral-500" />
-                      <span>{ref.organization}</span>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="text-xs text-neutral-500 flex items-start gap-2 mb-6">
-                  <MapPin className="w-3.5 h-3.5 shrink-0 mt-0.5 text-neutral-500" />
-                  <span className="leading-relaxed">{ref.address}</span>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-neutral-900">
-                  <a
-                    href={`tel:${ref.phone.replace(/\s+/g, "")}`}
-                    className="chip gap-2 text-neutral-300 hover:text-white"
-                  >
-                    <Phone className="w-3.5 h-3.5 text-blue-400" />
-                    <span>{ref.phone}</span>
-                  </a>
-                  <a
-                    href={`mailto:${ref.email}`}
-                    className="chip gap-2 text-neutral-300 hover:text-white"
-                  >
-                    <Mail className="w-3.5 h-3.5 text-blue-400" />
-                    <span>{ref.email}</span>
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
