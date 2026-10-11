@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import {
-  ArrowRight,
-  Send,
+  ArrowUpRight,
+  ArrowDown,
   Layers,
   Cpu,
   Smartphone,
@@ -15,142 +14,133 @@ import { Github, Linkedin } from "@/components/BrandIcons";
 
 export default function Hero() {
   const domains = [
-    { label: "Web Apps", icon: Layers, color: "text-blue-400 bg-blue-500/10" },
-    { label: "Mobile Apps", icon: Smartphone, color: "text-blue-400 bg-blue-500/10" },
-    { label: "IoT & Embedded", icon: Cpu, color: "text-emerald-400 bg-emerald-500/10" },
-    { label: "AI Integration", icon: Bot, color: "text-violet-400 bg-violet-500/10" },
-    { label: "Dev Tools", icon: Terminal, color: "text-amber-400 bg-amber-500/10" },
+    { label: "Web Applications", icon: Layers, color: "text-blue-400" },
+    { label: "Mobile Companion", icon: Smartphone, color: "text-blue-400" },
+    { label: "IoT & Embedded C++", icon: Cpu, color: "text-emerald-400" },
+    { label: "AI Integration", icon: Bot, color: "text-violet-400" },
+    { label: "Developer Utilities", icon: Terminal, color: "text-amber-400" },
   ];
 
   return (
     <section
       id="hero"
-      className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden flex flex-col justify-center min-h-[90vh] bg-black"
+      className="relative overflow-hidden bg-black lg:flex lg:min-h-[100svh] lg:items-center"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+      {/* Background / Left Side Hero Portrait — Layout matching Pahan Jayasinghe's site */}
+      <div className="relative w-full pt-20 lg:absolute lg:inset-0 lg:pt-0 pointer-events-none">
+        {/* Desktop View: Full-bleed image across background, left-aligned, right side pure black */}
+        <div className="hidden lg:block relative w-full h-full">
+          <Image
+            src="/images/hero-portrait.png"
+            alt="Portrait of Venuja Silva"
+            fill
+            priority
+            className="object-cover object-[left_center]"
+            sizes="100vw"
+          />
+        </div>
 
-          {/* Profile Photo Avatar — Large, Crisp on Complete Black */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="relative mb-8 group"
-          >
-            <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden bg-black ring-2 ring-blue-600/40 shadow-2xl shadow-black">
-              <Image
-                src="/images/profile.png"
-                alt="Venuja Silva"
-                fill
-                priority
-                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 640px) 224px, (max-width: 768px) 288px, 320px"
-              />
-            </div>
-          </motion.div>
+        {/* Mobile View: 16:9 aspect image showing Venuja clearly on top */}
+        <div className="block lg:hidden relative w-full aspect-video">
+          <Image
+            src="/images/hero-portrait.png"
+            alt="Portrait of Venuja Silva"
+            fill
+            priority
+            className="object-cover object-[24%_center]"
+            sizes="100vw"
+          />
+        </div>
+      </div>
 
-          {/* Name & Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4"
-          >
-            Hi, I&apos;m Venuja Silva
-          </motion.h1>
+      {/* Hero Content Container */}
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-10 pb-20 md:px-10 lg:py-32">
+        <div className="lg:ml-[48%] lg:pl-6 xl:ml-[46%] xl:pl-10">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3">
+            <span className="rule-accent" />
+            <span className="eyebrow">Venuja Silva</span>
+          </div>
 
-          {/* Professional Title */}
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl sm:text-2xl lg:text-3xl font-semibold text-blue-400 mb-6"
-          >
-            Software Developer | AI &amp; IoT Enthusiast
-          </motion.h2>
+          {/* Headline */}
+          <h1 className="mt-6 text-[2.6rem] leading-[0.96] font-bold sm:text-6xl xl:text-7xl tracking-tight text-white">
+            Engineering Software &amp; <br />
+            <span className="text-blue-500">Connected Systems</span>
+          </h1>
 
-          {/* Introduction & Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed mb-8 font-normal"
-          >
-            Building intelligent software, connected systems, and practical digital solutions.
-            I design and engineer across{" "}
-            <span className="text-white font-medium">web development</span>,{" "}
-            <span className="text-white font-medium">mobile development</span>,{" "}
-            <span className="text-white font-medium">IoT &amp; embedded systems</span>,{" "}
-            <span className="text-white font-medium">AI integrations</span>, and{" "}
-            <span className="text-white font-medium">automation tooling</span>.
-          </motion.p>
+          {/* Subtitle */}
+          <p className="text-neutral-300 font-mono text-xs sm:text-sm tracking-wide mt-6">
+            Lead Frontend Engineer @ Vendly.lk
+            <span className="text-blue-500 mx-2">|</span>
+            IoT &amp; Systems Developer
+          </p>
 
-          {/* CTA Buttons & Socials */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap items-center justify-center gap-4 mb-12"
-          >
+          {/* Bio text */}
+          <p className="text-neutral-400 mt-6 max-w-xl text-sm leading-relaxed sm:text-base">
+            Building intelligent software, connected hardware systems, and practical digital solutions.
+            Specialized in component-driven web platforms, low-level ESP32 firmware, and developer automation.
+          </p>
+
+          {/* Pill CTA Buttons & Socials */}
+          <div className="mt-10 flex flex-wrap items-center gap-3.5">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-lg shadow-blue-950/40 transition-all hover:scale-105 active:scale-95"
+              className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-6 py-3.5 text-xs font-semibold tracking-[0.16em] uppercase group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl shadow-blue-600/25"
             >
-              View My Projects
-              <ArrowRight className="w-4 h-4" />
+              Explore My Work
+              <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold text-sm backdrop-blur-md transition-all hover:scale-105 active:scale-95 shadow-md shadow-black"
+              className="border border-neutral-800 hover:border-blue-600 hover:bg-blue-600/10 text-neutral-200 hover:text-white rounded-full px-6 py-3.5 text-xs font-semibold tracking-[0.16em] uppercase inline-flex items-center gap-2 transition-all duration-300"
             >
-              Contact Me
-              <Send className="w-4 h-4 text-blue-400" />
+              Let&apos;s Connect
             </a>
 
-            {/* Social Badges */}
-            <div className="flex items-center gap-2 pl-1">
+            {/* Social Icons */}
+            <div className="flex items-center gap-2 pl-2">
               <a
                 href="https://github.com/venujatech-byte"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-xl bg-neutral-900/90 hover:bg-neutral-800 text-neutral-300 hover:text-white transition-all hover:scale-105 shadow-sm shadow-black/30"
+                className="p-3 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white hover:border-neutral-700 transition-all hover:scale-105"
                 aria-label="Venuja Silva GitHub"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-4 h-4" />
               </a>
               <a
                 href="https://www.linkedin.com/in/contact-venuja-silva"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-xl bg-neutral-900/90 hover:bg-neutral-800 text-neutral-300 hover:text-white transition-all hover:scale-105 shadow-sm shadow-black/30"
+                className="p-3 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white hover:border-neutral-700 transition-all hover:scale-105"
                 aria-label="Venuja Silva LinkedIn"
-                title="LinkedIn Profile"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-4 h-4" />
               </a>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Interactive Technology Domains Pill Strip */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-wrap items-center justify-center gap-2.5 max-w-2xl"
-          >
+          {/* Technology Domains Chip Strip */}
+          <div className="mt-10 flex flex-wrap items-center gap-2">
             {domains.map((domain) => {
               const IconComponent = domain.icon;
               return (
-                <div
-                  key={domain.label}
-                  className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium ${domain.color} backdrop-blur-sm transition-transform hover:-translate-y-0.5`}
-                >
-                  <IconComponent className="w-3.5 h-3.5" />
+                <span key={domain.label} className="chip gap-2">
+                  <IconComponent className={`w-3.5 h-3.5 ${domain.color}`} />
                   <span>{domain.label}</span>
-                </div>
+                </span>
               );
             })}
-          </motion.div>
+          </div>
+
+          {/* Scroll to explore */}
+          <a
+            href="#about"
+            className="text-neutral-500 hover:text-neutral-300 mt-12 inline-flex items-center gap-2 text-[0.62rem] tracking-[0.22em] uppercase transition-colors"
+          >
+            Scroll to explore
+            <ArrowDown className="w-3.5 h-3.5 motion-safe:animate-bounce text-blue-500" />
+          </a>
         </div>
       </div>
     </section>

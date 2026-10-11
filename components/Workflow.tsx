@@ -17,90 +17,102 @@ import { Figma } from "@/components/BrandIcons";
 export default function Workflow() {
   const webSteps = [
     {
-      title: "1. Concept & UX",
+      num: "01",
+      title: "Concept & UX",
       tech: "Figma",
-      desc: "User journey mapping, wireframing, and creating atomic design tokens.",
+      desc: "User journey mapping, wireframing, and atomic design tokens.",
       icon: Figma,
-      color: "text-purple-400 bg-purple-500/10",
+      color: "text-purple-400",
     },
     {
-      title: "2. Frontend UI",
+      num: "02",
+      title: "Frontend UI",
       tech: "React / Next.js",
       desc: "Component-driven development with responsive CSS & stateful data flows.",
       icon: Code2,
-      color: "text-blue-400 bg-blue-500/10",
+      color: "text-blue-400",
     },
     {
-      title: "3. API & Logic",
+      num: "03",
+      title: "API & Logic",
       tech: "Flask / REST",
       desc: "Clean backend route architecture, data validation, and business logic.",
       icon: Database,
-      color: "text-blue-400 bg-blue-500/10",
+      color: "text-blue-400",
     },
     {
-      title: "4. Data Cloud",
+      num: "04",
+      title: "Data Cloud",
       tech: "Firebase / Firestore",
       desc: "Real-time document persistence, auth states, and cloud storage.",
       icon: CloudLightning,
-      color: "text-amber-400 bg-amber-500/10",
+      color: "text-amber-400",
     },
     {
-      title: "5. Code Review",
+      num: "05",
+      title: "Code Review",
       tech: "GitHub",
       desc: "Branching strategies, pull request reviews, and continuous integration.",
       icon: GitBranch,
-      color: "text-slate-300 bg-slate-500/10",
+      color: "text-neutral-300",
     },
     {
-      title: "6. Deployment",
+      num: "06",
+      title: "Deployment",
       tech: "Vercel",
       desc: "Edge-distributed static and serverless hosting with preview environments.",
       icon: Rocket,
-      color: "text-emerald-400 bg-emerald-500/10",
+      color: "text-emerald-400",
     },
   ];
 
   const iotSteps = [
     {
+      num: "01",
       title: "Hardware Specs",
-      tech: "Breadboard & Prototyping",
-      desc: "Pin mapping, power regulation (3.3V / 5V), and circuit schematics.",
+      tech: "Pin Mapping",
+      desc: "Pin allocation, power regulation (3.3V / 5V), and circuit schematics.",
       icon: Lightbulb,
     },
     {
-      title: "Sensors & Actuators",
-      tech: "Environmental & Vision",
-      desc: "Interfacing analog sensors, I2C / SPI peripherals, and relay drivers.",
+      num: "02",
+      title: "Sensors & Peripherals",
+      tech: "I2C / SPI",
+      desc: "Interfacing analog sensors, serial buses, and relay driver modules.",
       icon: Cpu,
     },
     {
+      num: "03",
       title: "Firmware Core",
-      tech: "ESP32 / Embedded C++",
-      desc: "Register manipulation, task loops, interrupt handling, and sensor debouncing.",
+      tech: "Embedded C++",
+      desc: "Register manipulation, task loops, interrupt handling, and debouncing.",
       icon: Code2,
     },
     {
+      num: "04",
       title: "Connectivity",
       tech: "Wi-Fi & Protocols",
       desc: "Auto-reconnect logic, secure TLS handshake, and local web servers.",
       icon: Radio,
     },
     {
-      title: "Cloud & APIs",
+      num: "05",
+      title: "Cloud Telemetry",
       tech: "HTTP / Webhooks",
-      desc: "RESTful telemetry dispatch and correlation with weather & third-party endpoints.",
+      desc: "RESTful telemetry dispatch and correlation with weather & IoT endpoints.",
       icon: CloudLightning,
     },
     {
+      num: "06",
       title: "Notifications",
-      tech: "Telegram / Alerts",
-      desc: "Instant automated trigger dispatch and bidirectional chat remote commanding.",
+      tech: "Telegram API",
+      desc: "Instant automated trigger dispatch and bidirectional remote commanding.",
       icon: Bell,
     },
   ];
 
   return (
-    <section id="workflow" className="py-20 md:py-28 relative">
+    <section id="workflow" className="py-24 md:py-32 relative bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -108,23 +120,23 @@ export default function Workflow() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center text-center mb-16"
+          className="mb-14 md:mb-20"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-3">
-            Engineering Methodology
+          <div className="flex items-center gap-3 mb-4">
+            <span className="rule-accent" />
+            <span className="eyebrow">05 — Engineering Methodology</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            How I Build &amp; Ship Projects
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.05]">
+            How I Build &amp; <span className="text-blue-500">Ship Systems</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base max-w-2xl mt-3">
-            A structured, reliable lifecycle from initial problem definition to deployed,
+          <p className="text-neutral-400 text-sm sm:text-base max-w-2xl mt-4 leading-relaxed">
+            A structured, repeatable lifecycle from problem definition to deployed,
             resilient production software and hardware.
           </p>
-          <div className="w-12 h-1 bg-blue-600 rounded-full mt-4" />
         </motion.div>
 
         {/* Track 1: Web & Digital Product Pipeline */}
-        <div className="mb-14">
+        <div className="mb-16">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400">
               <Rocket className="w-5 h-5" />
@@ -133,7 +145,7 @@ export default function Workflow() {
               <h3 className="text-lg sm:text-xl font-bold text-white">
                 Web &amp; Digital Applications Pipeline
               </h3>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-neutral-500 font-mono mt-0.5">
                 Figma → React/Next.js → Flask/APIs → Firebase → GitHub → Vercel
               </p>
             </div>
@@ -149,19 +161,25 @@ export default function Workflow() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.08 }}
-                  className="glass-panel glass-panel-hover p-4 rounded-xl flex flex-col justify-between relative"
+                  className="surface-card p-5 flex flex-col justify-between"
                 >
                   <div>
-                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${step.color} mb-3`}>
-                      <IconComponent className="w-4 h-4" />
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="p-2 rounded-lg bg-neutral-900 border border-neutral-800">
+                        <IconComponent className={`w-4 h-4 ${step.color}`} />
+                      </div>
+                      <span className="text-xs font-mono font-bold text-neutral-600">
+                        {step.num}
+                      </span>
                     </div>
-                    <span className="text-[11px] font-mono text-blue-400 uppercase tracking-wider block mb-1">
+
+                    <h4 className="text-sm font-bold text-white mb-1">
                       {step.title}
-                    </span>
-                    <h4 className="text-sm font-semibold text-white mb-2">
-                      {step.tech}
                     </h4>
-                    <p className="text-xs text-slate-400 leading-relaxed">
+                    <span className="chip py-0 px-2 text-[10px] mb-3 inline-block">
+                      {step.tech}
+                    </span>
+                    <p className="text-xs text-neutral-400 leading-relaxed">
                       {step.desc}
                     </p>
                   </div>
@@ -181,8 +199,8 @@ export default function Workflow() {
               <h3 className="text-lg sm:text-xl font-bold text-white">
                 IoT &amp; Embedded Systems Pipeline
               </h3>
-              <p className="text-xs text-slate-400">
-                Hardware → Sensors → ESP32 → Connectivity → API/Cloud → Notifications
+              <p className="text-xs text-neutral-500 font-mono mt-0.5">
+                Hardware Specs → Sensors → ESP32 Firmware → Connectivity → Cloud Telemetry → Notifications
               </p>
             </div>
           </div>
@@ -197,22 +215,25 @@ export default function Workflow() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.08 }}
-                  className="glass-panel glass-panel-hover p-4 rounded-xl flex flex-col justify-between"
+                  className="surface-card p-5 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-emerald-500/10 text-emerald-400 mb-3">
-                      <IconComponent className="w-4 h-4" />
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="p-2 rounded-lg bg-neutral-900 border border-neutral-800">
+                        <IconComponent className="w-4 h-4 text-emerald-400" />
+                      </div>
+                      <span className="text-xs font-mono font-bold text-neutral-600">
+                        {step.num}
+                      </span>
                     </div>
-                    <span className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider block mb-1">
-                      Step 0{idx + 1}
-                    </span>
-                    <h4 className="text-sm font-semibold text-white mb-2">
+
+                    <h4 className="text-sm font-bold text-white mb-1">
                       {step.title}
                     </h4>
-                    <span className="inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-900 text-neutral-300 mb-2">
+                    <span className="chip py-0 px-2 text-[10px] mb-3 inline-block">
                       {step.tech}
                     </span>
-                    <p className="text-xs text-slate-400 leading-relaxed">
+                    <p className="text-xs text-neutral-400 leading-relaxed">
                       {step.desc}
                     </p>
                   </div>

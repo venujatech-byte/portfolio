@@ -43,19 +43,19 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center text-center mb-12"
+          className="mb-12 md:mb-16"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-3">
-            Portfolio Showcase
+          <div className="flex items-center gap-3 mb-4">
+            <span className="rule-accent" />
+            <span className="eyebrow">03 — Featured Work</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Featured Projects &amp; Hardware Systems
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.05]">
+            Selected Projects &amp; <span className="text-blue-500">Systems</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base max-w-2xl mt-3">
-            Real software and hardware projects built across full-stack web platforms,
-            embedded microcontrollers, desktop productivity tools, and automated notifications.
+          <p className="text-neutral-400 text-sm sm:text-base max-w-2xl mt-4 leading-relaxed">
+            Real software and hardware projects spanning full-stack web platforms,
+            embedded microcontrollers, desktop productivity tools, and cloud alerting pipelines.
           </p>
-          <div className="w-12 h-1 bg-blue-600 rounded-full mt-4" />
         </motion.div>
 
         {/* Filter Navigation Bar */}
@@ -64,25 +64,25 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="flex items-center justify-center mb-12 overflow-x-auto pb-2 scrollbar-none"
+          className="flex items-center justify-start sm:justify-center mb-12 overflow-x-auto pb-2 scrollbar-none"
         >
-          <div className="flex items-center gap-1.5 p-1.5 rounded-2xl shadow-xl shadow-black" style={{ background: "rgba(12,12,14,0.85)" }}>
+          <div className="flex items-center gap-1.5 p-1 rounded-full border border-neutral-900 bg-neutral-950/80">
             {filterOptions.map((category) => {
               const isActive = activeFilter === category;
               return (
                 <button
                   key={category}
                   onClick={() => setActiveFilter(category)}
-                  className={`relative px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 whitespace-nowrap ${
+                  className={`relative px-4 py-2 text-xs font-semibold rounded-full transition-all duration-200 whitespace-nowrap ${
                     isActive
                       ? "text-white"
-                      : "text-slate-400 hover:text-slate-200 hover:bg-white/5"
+                      : "text-neutral-400 hover:text-white"
                   }`}
                 >
                   {isActive && (
                     <motion.div
                       layoutId="activeFilterPill"
-                      className="absolute inset-0 bg-blue-600 rounded-xl shadow-md shadow-blue-900/40"
+                      className="absolute inset-0 bg-blue-600 rounded-full"
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Smartphone,
@@ -7,47 +8,59 @@ import {
   Users,
   CheckCircle2,
   FolderGit2,
+  Terminal,
+  ChevronDown,
 } from "lucide-react";
 
 export default function About() {
-  const highlights = [
+  const [activeTab, setActiveTab] = useState<number>(0);
+
+  const throughLine = [
     {
-      title: "6+ Projects",
-      subtitle: "Full-stack web, IoT, and desktop utilities",
-      icon: FolderGit2,
-      color: "text-blue-400 bg-blue-500/10",
-    },
-    {
-      title: "Web & Mobile",
-      subtitle: "React, Next.js, and responsive digital apps",
+      num: "01",
+      title: "Frontend & Web Architecture",
+      summary: "Modular component engineering, responsive state management, and real-time cloud data pipelines with React, Next.js, and Firebase.",
       icon: Smartphone,
-      color: "text-blue-400 bg-blue-500/10",
     },
     {
-      title: "IoT & Embedded",
-      subtitle: "ESP32, Arduino, sensors & hardware automation",
+      num: "02",
+      title: "Embedded Systems & IoT",
+      summary: "Designing firmware in Embedded C++, interfacing physical sensors, Wi-Fi connectivity, and cloud alerting with ESP32 and Arduino.",
       icon: Cpu,
-      color: "text-emerald-400 bg-emerald-500/10",
     },
     {
-      title: "Team Leadership",
-      subtitle: "Led engineering & UI/UX delivery on Vendly.lk",
+      num: "03",
+      title: "Backend & Systems Logic",
+      summary: "Building robust REST endpoints with Flask, asynchronous sockets, and Python subprocess pipelines to manage developer services.",
+      icon: Terminal,
+    },
+    {
+      num: "04",
+      title: "Product Delivery & Leadership",
+      summary: "Leading technical delivery on Vendly.lk, architecting UI/UX wireframes in Figma, coordinating team tasks, and managing GitHub reviews.",
       icon: Users,
-      color: "text-violet-400 bg-violet-500/10",
+    },
+    {
+      num: "05",
+      title: "Developer Productivity Tools",
+      summary: "Crafting multithreaded desktop applications with Python Tkinter to monitor developer servers, capture logs, and manage process ports.",
+      icon: FolderGit2,
     },
   ];
 
-  const focusAreas = [
-    "Web Applications (React, Next.js, Flask, Firebase)",
-    "Mobile Applications (Cross-platform companion apps)",
-    "AI-Powered & Vision Systems (ESP32-CAM, APIs, Automation)",
-    "IoT & Embedded Systems (ESP32, Arduino, Wi-Fi, Telemetry)",
-    "Automation & Developer Tools (Python, Tkinter, Scripting)",
-    "UI/UX Design (Figma wireframes, design systems & prototyping)",
+  const focusChips = [
+    "React & Next.js",
+    "Embedded C/C++",
+    "ESP32 & Arduino",
+    "Flask & REST APIs",
+    "Firebase Firestore",
+    "Python Desktop Utilities",
+    "Figma UI/UX Systems",
+    "Git & GitHub Workflows",
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 relative bg-black">
+    <section id="about" className="py-24 md:py-32 relative bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -55,123 +68,138 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center text-center mb-16"
+          className="mb-14 md:mb-20"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-3">
-            About Me
+          <div className="flex items-center gap-3 mb-4">
+            <span className="rule-accent" />
+            <span className="eyebrow">01 — About Me</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Engineering Practical, High-Impact Technology
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.05]">
+            Turning Technical Concepts Into <br className="hidden sm:inline" />
+            <span className="text-blue-500">Dependable Solutions</span>
           </h2>
-          <div className="w-12 h-1 bg-blue-600 rounded-full mt-3" />
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          {/* Left: Bio / Narrative */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Left Column: Narrative & Focus Chips */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 flex flex-col gap-6"
+            className="lg:col-span-7 flex flex-col gap-8"
           >
-            <div className="p-6 sm:p-8 rounded-2xl relative overflow-hidden"
-              style={{ background: "rgba(12,12,14,0.8)", boxShadow: "0 10px 32px -10px rgba(0,0,0,0.85)" }}
-            >
-              <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                <span>Building at the Intersection of Software &amp; Hardware</span>
-              </h3>
-              <p className="text-slate-300 leading-relaxed text-sm sm:text-base mb-4">
-                I am a software developer passionate about crafting functional, reliable,
-                and well-architected solutions. My journey spans the full engineering
-                spectrum—from writing modern, component-driven web applications to designing
-                real-time IoT firmware that bridges physical sensors with the cloud.
+            <div>
+              <p className="text-xl sm:text-2xl text-neutral-200 font-semibold leading-relaxed tracking-tight mb-6">
+                I am a software engineer focused on building practical, resilient systems
+                across web, hardware, and desktop environments.
               </p>
-              <p className="text-slate-300 leading-relaxed text-sm sm:text-base mb-4">
-                As the <span className="text-blue-400 font-medium">Team Leader on Vendly.lk</span>,
-                I guided our development stream through end-to-end product delivery:
-                conceptualizing workflows in Figma, establishing reusable React frontend
-                components, coordinating Flask and Firebase integrations, and facilitating
-                structured collaboration across GitHub repositories and Notion boards.
+              <p className="text-neutral-400 text-sm sm:text-base leading-relaxed mb-5">
+                My work spans the full engineering spectrum. As the{" "}
+                <span className="text-white font-medium">Team Leader &amp; Frontend Engineer on Vendly.lk</span>,
+                I spearheaded our team&apos;s product development: architecting the user flows and wireframes in
+                Figma, structuring modular React frontend components, integrating Firebase and Flask services,
+                and maintaining our GitHub development roadmap.
               </p>
-              <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
-                Whether writing responsive web interfaces, crafting Python developer
-                utilities, or deploying ESP32 microcontrollers for environmental sensing
-                and computer vision, I believe in writing clean code, designing intuitive user
-                interfaces, and building tools that genuinely solve practical problems.
+              <p className="text-neutral-400 text-sm sm:text-base leading-relaxed mb-5">
+                Beyond the browser, I build autonomous IoT solutions using ESP32 and Arduino,
+                developing low-level C++ firmware that reads real-time environmental sensors and dispatches
+                encrypted cloud alerts via Telegram.
+              </p>
+              <p className="text-neutral-400 text-sm sm:text-base leading-relaxed">
+                Whether deploying a distributed web app or optimizing embedded firmware loops,
+                my philosophy is simple: write clean code, eliminate friction, and build things that work reliably.
               </p>
             </div>
 
-            {/* Core Competencies Checklist */}
-            <div className="p-6 sm:p-7 rounded-2xl"
-              style={{ background: "rgba(12,12,14,0.8)", boxShadow: "0 10px 32px -10px rgba(0,0,0,0.85)" }}
-            >
-              <h4 className="text-sm font-semibold text-slate-200 uppercase tracking-wider mb-4">
-                Hands-On Experience Across
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {focusAreas.map((area) => (
-                  <div
-                    key={area}
-                    className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300"
-                  >
-                    <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
-                    <span>{area}</span>
-                  </div>
+            {/* Core Competency Chips */}
+            <div>
+              <p className="eyebrow mb-4">Core Focus Areas</p>
+              <div className="flex flex-wrap gap-2">
+                {focusChips.map((chip) => (
+                  <span key={chip} className="chip">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-400 mr-2 shrink-0" />
+                    {chip}
+                  </span>
                 ))}
               </div>
             </div>
-          </motion.div>
 
-          {/* Right: Key Highlights / Stats Cards */}
-          <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-            {highlights.map((item, idx) => {
-              const IconComp = item.icon;
-              return (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, x: 25 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="p-5 rounded-xl flex items-start gap-4 transition-all duration-300 hover:translate-y-[-2px]"
-                  style={{ background: "rgba(12,12,14,0.8)", boxShadow: "0 6px 24px -8px rgba(0,0,0,0.8)" }}
-                >
-                  <div
-                    className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${item.color}`}
-                  >
-                    <IconComp className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-base font-bold text-white tracking-tight">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs text-slate-400 mt-1 leading-relaxed">
-                      {item.subtitle}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
-
-            {/* Quote / Philosophy Box */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="p-5 rounded-xl relative overflow-hidden"
-              style={{ background: "#0a0a0a", boxShadow: "0 4px 20px -6px rgba(0,0,0,0.8)" }}
-            >
-              <p className="text-xs sm:text-sm text-slate-300 italic">
+            {/* Quote Block */}
+            <div className="surface-card p-6 border-l-2 border-l-blue-600">
+              <p className="text-sm text-neutral-300 italic leading-relaxed">
                 &ldquo;Great software isn&apos;t just code that runs—it is thoughtful design,
-                dependable architecture, and practical value for the people who use it.&rdquo;
+                dependable architecture, and practical value for the people who rely on it.&rdquo;
               </p>
-              <span className="block mt-2 text-xs font-semibold text-blue-400">
+              <span className="block mt-3 text-xs font-mono font-semibold text-blue-400">
                 — Venuja Silva
               </span>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
+
+          {/* Right Column: The Through-Line (Inspired by Pahan's site) */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-5"
+          >
+            <div className="mb-4">
+              <p className="eyebrow">The Through-Line</p>
+              <p className="text-xs text-neutral-500 mt-1">
+                Five pillars anchoring my engineering practice
+              </p>
+            </div>
+
+            <div className="divide-y divide-neutral-900 border-t border-b border-neutral-900">
+              {throughLine.map((item, idx) => {
+                const isOpen = activeTab === idx;
+                const IconComp = item.icon;
+                return (
+                  <div key={item.num} className="py-4">
+                    <button
+                      type="button"
+                      onClick={() => setActiveTab(isOpen ? -1 : idx)}
+                      className="w-full flex items-center justify-between text-left group transition-colors"
+                      aria-expanded={isOpen}
+                    >
+                      <div className="flex items-baseline gap-3.5">
+                        <span className={`font-mono text-xs tracking-widest transition-colors ${isOpen ? "text-blue-500 font-bold" : "text-neutral-600 group-hover:text-neutral-400"}`}>
+                          {item.num}
+                        </span>
+                        <span className={`text-base font-semibold tracking-tight transition-all duration-200 ${isOpen ? "text-white translate-x-1" : "text-neutral-300 group-hover:text-white"}`}>
+                          {item.title}
+                        </span>
+                      </div>
+                      <ChevronDown
+                        className={`w-4 h-4 text-neutral-500 transition-transform duration-300 ${isOpen ? "rotate-180 text-blue-500" : "group-hover:text-white"}`}
+                      />
+                    </button>
+
+                    {isOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="mt-3 pl-8 pr-2"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400 shrink-0 mt-0.5">
+                            <IconComp className="w-4 h-4" />
+                          </div>
+                          <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                            {item.summary}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

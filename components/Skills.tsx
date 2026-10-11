@@ -33,7 +33,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-20 md:py-28 relative bg-black">
+    <section id="skills" className="py-24 md:py-32 relative bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -41,19 +41,19 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center text-center mb-16"
+          className="mb-14 md:mb-20"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-3">
-            Technical Stack
+          <div className="flex items-center gap-3 mb-4">
+            <span className="rule-accent" />
+            <span className="eyebrow">04 — Skills &amp; Stack</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Skills &amp; Technologies
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.05]">
+            Technical Stack &amp; <span className="text-blue-500">Tooling</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base max-w-xl mt-3">
-            Categorized toolkit across full-stack web engineering, microcontroller hardware,
-            applied AI, and collaboration systems.
+          <p className="text-neutral-400 text-sm sm:text-base max-w-2xl mt-4 leading-relaxed">
+            Areas of practical engineering expertise across full-stack web platforms,
+            embedded microcontrollers, applied AI, and collaboration systems.
           </p>
-          <div className="w-12 h-1 bg-blue-600 rounded-full mt-4" />
         </motion.div>
 
         {/* Skills Grid */}
@@ -65,40 +65,35 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:translate-y-[-3px]"
-              style={{ background: "rgba(12,12,14,0.8)", boxShadow: "0 10px 30px -10px rgba(0,0,0,0.85)" }}
+              className="surface-card p-7 sm:p-8 flex flex-col justify-between"
             >
               <div>
                 {/* Category Header */}
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2.5 rounded-xl shadow-inner" style={{ background: "rgba(255,255,255,0.05)" }}>
+                <div className="flex items-center gap-3.5 mb-3.5">
+                  <div className="p-2.5 rounded-xl bg-neutral-900 border border-neutral-800">
                     {getIcon(category.icon)}
                   </div>
                   <div>
-                    <h3 className="text-base font-semibold text-white">
+                    <h3 className="text-base font-bold text-white tracking-tight">
                       {category.name}
                     </h3>
                   </div>
                 </div>
 
-                <p className="text-xs text-slate-400 mb-5 leading-relaxed">
+                <p className="text-xs text-neutral-400 mb-6 leading-relaxed">
                   {category.description}
                 </p>
 
-                {/* Skill Badges / Tags */}
+                {/* Skill Chips */}
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
                     <span
                       key={skill.name}
-                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 ${
+                      className={`chip ${
                         skill.highlight
-                          ? "text-blue-300 hover:text-white"
-                          : "text-slate-300 hover:text-white"
+                          ? "border-blue-600/40 text-blue-300 font-semibold"
+                          : ""
                       }`}
-                      style={skill.highlight
-                        ? { background: "rgba(37,99,235,0.15)" }
-                        : { background: "rgba(255,255,255,0.05)" }
-                      }
                     >
                       {skill.name}
                     </span>
@@ -106,12 +101,12 @@ export default function Skills() {
                 </div>
               </div>
 
-              {/* Bottom Subtle Note for AI category */}
+              {/* Bottom Note for AI category */}
               {category.id === "ai-systems" && (
-                <div className="mt-5 pt-3">
-                  <span className="text-[11px] text-slate-400 flex items-center gap-1.5">
+                <div className="mt-6 pt-3 border-t border-neutral-900">
+                  <span className="text-[11px] text-neutral-500 font-mono flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-violet-400 inline-block" />
-                    Focused on practical integrations and edge deployment
+                    Edge deployment &amp; real-time sensor correlation
                   </span>
                 </div>
               )}
