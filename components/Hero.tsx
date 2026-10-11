@@ -31,7 +31,7 @@ export default function Hero() {
         {/* Desktop View: Full-bleed image across background, left-aligned, right side pure black */}
         <div className="hidden lg:block relative w-full h-full">
           <Image
-            src="/images/hero-portrait-v2.png"
+            src="/images/hero-portrait-v3.png"
             alt="Portrait of Venuja Silva"
             fill
             priority
@@ -43,11 +43,11 @@ export default function Hero() {
         {/* Mobile View: 16:9 aspect image showing Venuja clearly on top */}
         <div className="block lg:hidden relative w-full aspect-video">
           <Image
-            src="/images/hero-portrait-v2.png"
+            src="/images/hero-portrait-v3.png"
             alt="Portrait of Venuja Silva"
             fill
             priority
-            className="object-cover object-[24%_center]"
+            className="object-cover object-[20%_center]"
             sizes="(max-width: 1023px) 100vw, 0px"
           />
         </div>
@@ -55,7 +55,7 @@ export default function Hero() {
 
       {/* Hero Content Container */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-10 pb-20 md:px-10 lg:py-32">
-        <div className="lg:ml-[48%] lg:pl-6 xl:ml-[46%] xl:pl-10">
+        <div className="lg:ml-[50%] lg:pl-6 xl:ml-[48%] xl:pl-10">
           {/* Eyebrow */}
           <div className="flex items-center gap-3">
             <span className="rule-accent" />
