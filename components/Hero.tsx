@@ -64,8 +64,8 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="mt-6 text-[2.6rem] leading-[0.96] font-bold sm:text-6xl xl:text-7xl tracking-tight text-white">
-            Engineering Software &amp; <br />
-            <span className="text-blue-500">Connected Systems</span>
+            Hi, I&apos;m Venuja Silva. <br />
+            <span className="text-blue-500">Engineering Software &amp; Connected Systems</span>
           </h1>
 
           {/* Subtitle */}
