@@ -15,17 +15,17 @@ export default function Experience() {
       num: "01",
       title: "Team Leader & Frontend Engineer",
       organization: "Vendly.lk",
-      period: "Core Project Leadership",
-      type: "Team Leadership & Engineering",
+      period: "July 2026 – Sept 2026",
+      type: "Project Leadership & Engineering",
       description:
-        "Led the technical delivery, UX planning, and component architecture for Vendly.lk, a unified business management platform empowering small e-commerce merchants across web and mobile.",
+        "Led a multidisciplinary engineering team through a 9-week intensive sprint delivering Vendly.lk, a centralized business management platform for SMEs with AI chatbot order automation, deployed to Vercel and AWS.",
       responsibilities: [
-        "Directed engineering milestones, assigned tasks, and facilitated daily cross-functional progress between frontend and mobile teams.",
-        "Architected comprehensive wireframes, interactive user flows, and high-fidelity component libraries using Figma.",
-        "Built modular, responsive web interfaces with React, state management, and real-time Firebase data synchronization.",
-        "Managed project roadmap in Notion, coordinated code reviews via GitHub pull requests, and maintained clean release branches.",
+        "Directed team sprints, task distribution, and daily standups across frontend, mobile, and backend pipelines.",
+        "Architected Figma UI/UX wireframes and implemented high-fidelity React interfaces with real-time Firebase databases.",
+        "Engineered the customer-facing AI chatbot and automated order creation workflow, significantly reducing merchant message overhead.",
+        "Delivered and presented the complete product at InfoSchol Demo Day, orchestrating code reviews via GitHub and roadmaps in Notion.",
       ],
-      technologies: ["React", "JavaScript", "Flask", "Firebase", "Figma", "GitHub", "Notion"],
+      technologies: ["React", "JavaScript", "React Native", "Flask", "Firebase", "AWS", "Brevo", "Figma", "GitHub", "Notion"],
       links: [
         { label: "Live Web App", url: "https://vendly-lk.vercel.app" },
         { label: "Web Repository", url: "https://github.com/venujatech-byte/Vendly.lk.git" },
@@ -36,18 +36,18 @@ export default function Experience() {
     {
       num: "02",
       title: "Embedded Systems & IoT Developer",
-      organization: "Hardware Systems Engineering",
+      organization: "Hardware Systems Engineering (Solo)",
       period: "Hardware Prototyping",
-      type: "Hardware & Edge Computing",
+      type: "Embedded Hardware & Edge Computing",
       description:
-        "Engineered autonomous microcontroller solutions integrating physical sensor arrays, Wi-Fi connectivity, computer vision on ESP32-CAM, and cloud alerting mechanisms.",
+        "Designed and implemented autonomous hardware solutions combining physical sensor arrays, Wi-Fi connectivity, motion computer vision on ESP32-CAM, and cloud alert systems.",
       responsibilities: [
-        "Developed low-level C/C++ firmware pipelines for Arduino and ESP32 with real-time sensor polling.",
-        "Implemented secure outbound HTTPS long-polling integrations with Telegram Bot API for remote actuation.",
+        "Developed low-level C/C++ firmware pipelines for Arduino, ESP32, and ESP8266 microcontrollers.",
         "Built hyper-local weather alerting stations correlating on-board rain detectors with meteorology REST endpoints.",
-        "Integrated camera sensors with buffer-based motion detection algorithms.",
+        "Integrated camera modules with motion detection algorithms, web controls, and automated capture routines.",
+        "Engineered secure outbound HTTPS long-polling integrations with Telegram Bot API for remote actuation and notifications.",
       ],
-      technologies: ["ESP32", "Arduino", "Embedded C/C++", "Sensors", "Telegram API", "Wi-Fi"],
+      technologies: ["ESP32", "ESP32-CAM", "ESP8266", "Arduino", "Embedded C++", "Telegram Bot API", "Sensors"],
       links: [
         { label: "Weather Bot Repo", url: "https://github.com/venujatech-byte/ESP_Weather_BOT.git" },
       ],
@@ -56,21 +56,39 @@ export default function Experience() {
     {
       num: "03",
       title: "Desktop Tools & Utility Developer",
-      organization: "Software Engineering",
+      organization: "Software Engineering (Solo)",
       period: "Productivity Tools",
-      type: "Application Development",
+      type: "Native Application Development",
       description:
         "Developed native desktop management tools in Python to streamline development server lifecycles, monitor port listeners, and capture asynchronous process telemetry.",
       responsibilities: [
         "Designed asynchronous multithreaded GUI architectures using Python Tkinter.",
         "Built subprocess management pipelines to stream live console output and execute graceful shutdown signals.",
-        "Engineered socket-level inspection tools to detect and kill rogue processes holding developer ports.",
+        "Engineered socket-level inspection tools to detect and kill rogue processes holding developer ports with one click.",
       ],
-      technologies: ["Python", "Tkinter", "Process Management", "OS & Sockets"],
+      technologies: ["Python", "Tkinter", "Process Management", "OS & Sockets", "Subprocess"],
       links: [
         { label: "Server Launcher Repo", url: "https://github.com/venujatech-byte/Server_Launcher.git" },
       ],
       badge: "Desktop Tools",
+    },
+    {
+      num: "04",
+      title: "Founder & Operations Lead",
+      organization: "Online Business (Self-Managed)",
+      period: "E-Commerce & Digital Marketing",
+      type: "Entrepreneurship & Operations",
+      description:
+        "Independently founded and managed a small-scale online commercial business, executing digital marketing campaigns, order fulfillment logistics, customer relations, and sales growth strategies.",
+      responsibilities: [
+        "Orchestrated organic and paid social media marketing campaigns to build brand visibility and customer acquisition.",
+        "Handled end-to-end customer communications, inquiries, and dispute resolution with rapid response times.",
+        "Managed inventory lifecycle, order fulfillment pipelines, and packaging/shipping coordination.",
+        "Cultivated rigorous time management, basic financial accounting, and data-driven sales pricing strategies.",
+      ],
+      technologies: ["Social Media Marketing", "Order Management", "Customer Communication", "Time Management", "Sales Strategy"],
+      links: [],
+      badge: "Self-Managed Business",
     },
   ];
 
@@ -87,14 +105,14 @@ export default function Experience() {
         >
           <div className="flex items-center gap-3 mb-4">
             <span className="rule-accent" />
-            <span className="eyebrow">02 — Experience</span>
+            <span className="eyebrow">04 — Experience</span>
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.05]">
             Engineering &amp; <span className="text-blue-500">Leadership Roles</span>
           </h2>
           <p className="text-neutral-400 text-sm sm:text-base max-w-2xl mt-4 leading-relaxed">
-            A transparent record of practical technical responsibilities, team leadership,
-            and systems development.
+            A transparent record of practical technical responsibilities, engineering project leadership,
+            hardware development, and entrepreneurial execution.
           </p>
         </motion.div>
 

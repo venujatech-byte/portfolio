@@ -70,7 +70,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-neutral-300 font-mono text-xs sm:text-sm tracking-wide mt-6">
-            Lead Frontend Engineer @ Vendly.lk
+            Team Leader &amp; Frontend Engineer @ Vendly.lk
             <span className="text-blue-500 mx-2">|</span>
             IoT &amp; Systems Developer
           </p>

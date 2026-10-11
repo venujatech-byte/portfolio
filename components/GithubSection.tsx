@@ -55,7 +55,7 @@ export default function GithubSection() {
             <div className="lg:col-span-8">
               <div className="flex items-center gap-3 mb-4">
                 <span className="rule-accent" />
-                <span className="eyebrow">06 — Open Source Repositories</span>
+                <span className="eyebrow">07 — Open Source Repositories</span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight leading-[1.05]">
                 Verified Code on <span className="text-blue-500">GitHub</span>

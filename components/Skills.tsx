@@ -7,28 +7,28 @@ import {
   Code2,
   Server,
   Cpu,
-  BrainCircuit,
-  Wrench,
+  Terminal,
+  Users,
   Sparkles,
 } from "lucide-react";
 
 export default function Skills() {
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case "Layout":
-        return <Layout className="w-5 h-5 text-blue-400" />;
       case "Code2":
-        return <Code2 className="w-5 h-5 text-blue-400" />;
+        return <Code2 className="w-5 h-5 text-blue-500" />;
+      case "Layout":
+        return <Layout className="w-5 h-5 text-blue-500" />;
       case "Server":
-        return <Server className="w-5 h-5 text-indigo-400" />;
+        return <Server className="w-5 h-5 text-blue-500" />;
       case "Cpu":
-        return <Cpu className="w-5 h-5 text-emerald-400" />;
-      case "BrainCircuit":
-        return <BrainCircuit className="w-5 h-5 text-violet-400" />;
-      case "Wrench":
-        return <Wrench className="w-5 h-5 text-amber-400" />;
+        return <Cpu className="w-5 h-5 text-blue-500" />;
+      case "Terminal":
+        return <Terminal className="w-5 h-5 text-blue-500" />;
+      case "Users":
+        return <Users className="w-5 h-5 text-blue-500" />;
       default:
-        return <Sparkles className="w-5 h-5 text-blue-400" />;
+        return <Sparkles className="w-5 h-5 text-blue-500" />;
     }
   };
 
@@ -45,14 +45,14 @@ export default function Skills() {
         >
           <div className="flex items-center gap-3 mb-4">
             <span className="rule-accent" />
-            <span className="eyebrow">04 — Skills &amp; Stack</span>
+            <span className="eyebrow">02 — Skills &amp; Stack</span>
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.05]">
-            Technical Stack &amp; <span className="text-blue-500">Tooling</span>
+            Technical Stack &amp; <span className="text-blue-500">Core Tooling</span>
           </h2>
           <p className="text-neutral-400 text-sm sm:text-base max-w-2xl mt-4 leading-relaxed">
-            Areas of practical engineering expertise across full-stack web platforms,
-            embedded microcontrollers, applied AI, and collaboration systems.
+            Proficiencies across software engineering, embedded microcontrollers,
+            cloud backends, systems tooling, and collaborative team leadership.
           </p>
         </motion.div>
 
@@ -100,16 +100,6 @@ export default function Skills() {
                   ))}
                 </div>
               </div>
-
-              {/* Bottom Note for AI category */}
-              {category.id === "ai-systems" && (
-                <div className="mt-6 pt-3 border-t border-neutral-900">
-                  <span className="text-[11px] text-neutral-500 font-mono flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-violet-400 inline-block" />
-                    Edge deployment &amp; real-time sensor correlation
-                  </span>
-                </div>
-              )}
             </motion.div>
           ))}
         </div>

@@ -124,7 +124,7 @@ export default function Workflow() {
         >
           <div className="flex items-center gap-3 mb-4">
             <span className="rule-accent" />
-            <span className="eyebrow">05 — Engineering Methodology</span>
+            <span className="eyebrow">06 — Engineering Methodology</span>
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.05]">
             How I Build &amp; <span className="text-blue-500">Ship Systems</span>

@@ -25,7 +25,7 @@ export default function Contact() {
   const [copiedPhone, setCopiedPhone] = useState(false);
 
   const contactEmail = "venujatech@gmail.com";
-  const contactPhone = "0767722934";
+  const contactPhone = "+94 76 772 2934";
   const linkedInUrl = "https://www.linkedin.com/in/contact-venuja-silva";
   const gitHubUrl = "https://github.com/venujatech-byte";
 
@@ -68,7 +68,7 @@ export default function Contact() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <span className="rule-accent" />
-                <span className="eyebrow">07 — Contact</span>
+                <span className="eyebrow">08 — Contact</span>
               </div>
               <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.05]">
                 Let&apos;s Build Something <br className="hidden sm:inline" />
@@ -139,7 +139,7 @@ export default function Contact() {
               {/* Phone / Contact Card */}
               <div className="surface-card p-4 flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
@@ -147,8 +147,8 @@ export default function Contact() {
                       Direct / WhatsApp
                     </span>
                     <a
-                      href={`tel:${contactPhone}`}
-                      className="text-xs sm:text-sm font-semibold text-white hover:text-emerald-300 transition-colors font-mono"
+                      href="tel:+94767722934"
+                      className="text-xs sm:text-sm font-semibold text-white hover:text-blue-400 transition-colors font-mono"
                     >
                       {contactPhone}
                     </a>
@@ -162,7 +162,7 @@ export default function Contact() {
                   aria-label="Copy phone"
                 >
                   {copiedPhone ? (
-                    <Check className="w-4 h-4 text-emerald-400" />
+                    <Check className="w-4 h-4 text-blue-400" />
                   ) : (
                     <Copy className="w-4 h-4" />
                   )}
