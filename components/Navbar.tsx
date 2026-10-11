@@ -43,13 +43,13 @@ export default function Navbar() {
             className="flex items-center gap-2.5 group focus:outline-none"
             aria-label="Venuja Silva Homepage"
           >
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-bold text-white shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-200">
+            <div className="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white shadow-md shadow-blue-900/30 group-hover:scale-105 transition-transform duration-200">
               VS
             </div>
             <div className="flex flex-col">
               <span className="font-semibold text-slate-100 group-hover:text-white tracking-tight text-base flex items-center gap-1.5">
                 Venuja Silva
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse inline-block" />
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse inline-block" />
               </span>
               <span className="text-[11px] text-slate-400 font-mono tracking-wider -mt-0.5">
                 Software Dev
@@ -95,7 +95,7 @@ export default function Navbar() {
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg shadow-sm shadow-cyan-500/20 hover:from-cyan-400 hover:to-blue-500 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-sm shadow-blue-900/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               Get In Touch
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -106,7 +106,7 @@ export default function Navbar() {
           <div className="flex md:hidden items-center gap-2">
             <a
               href="#contact"
-              className="px-3 py-1.5 text-xs font-medium text-white bg-cyan-600/80 rounded-lg"
+              className="px-3 py-1.5 text-xs font-medium text-white bg-blue-600 rounded-lg"
             >
               Contact
             </a>

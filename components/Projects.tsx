@@ -35,7 +35,7 @@ export default function Projects() {
   const regularProjects = filteredProjects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="py-20 md:py-28 relative">
+    <section id="projects" className="py-20 md:py-28 relative bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -45,7 +45,7 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center mb-12"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-3">
             Portfolio Showcase
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
@@ -55,7 +55,7 @@ export default function Projects() {
             Real software and hardware projects built across full-stack web platforms,
             embedded microcontrollers, desktop productivity tools, and automated notifications.
           </p>
-          <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-4" />
+          <div className="w-12 h-1 bg-blue-600 rounded-full mt-4" />
         </motion.div>
 
         {/* Filter Navigation Bar */}
@@ -82,7 +82,7 @@ export default function Projects() {
                   {isActive && (
                     <motion.div
                       layoutId="activeFilterPill"
-                      className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl shadow-md shadow-cyan-500/25"
+                      className="absolute inset-0 bg-blue-600 rounded-xl shadow-md shadow-blue-900/40"
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -127,7 +127,7 @@ export default function Projects() {
                 <p className="text-slate-300 font-medium">No projects in this category</p>
                 <button
                   onClick={() => setActiveFilter("All")}
-                  className="mt-3 text-xs text-cyan-400 hover:underline"
+                  className="mt-3 text-xs text-blue-400 hover:underline"
                 >
                   Reset filters to All
                 </button>

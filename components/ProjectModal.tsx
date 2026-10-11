@@ -64,14 +64,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
           className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl z-10 p-7 sm:p-9"
           style={{
-            background: "linear-gradient(160deg, rgba(12,12,14,0.98) 0%, rgba(6,6,8,0.99) 100%)",
-            boxShadow: "0 40px 100px -20px rgba(0,0,0,0.98), 0 0 80px -30px rgba(6,182,212,0.15)",
+            background: "#080808",
           }}
         >
-          {/* Ambient glow */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/6 blur-[100px] rounded-full pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-60 h-60 bg-blue-600/6 blur-[80px] rounded-full pointer-events-none" />
-
           {/* Close Button */}
           <button
             onClick={onClose}
@@ -84,7 +79,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
           {/* Header Info */}
           <div className="flex flex-wrap items-center gap-2 mb-3 relative z-10">
-            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/12 text-cyan-400">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/12 text-blue-400">
               {project.category}
             </span>
             {project.badge && (
@@ -109,7 +104,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             className="relative w-full rounded-2xl overflow-hidden mb-6 z-10"
             style={{
               aspectRatio: "16/7",
-              background: "rgba(255,255,255,0.04)",
+              background: "#050505",
             }}
           >
             <Image
@@ -120,7 +115,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               sizes="(max-width: 768px) 100vw, 800px"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
           </div>
 
           {/* Action Links Bar */}
@@ -135,13 +129,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   rel="noopener noreferrer"
                   className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all hover:scale-105 active:scale-95 ${
                     link.primary
-                      ? "text-white"
+                      ? "text-white bg-blue-600 hover:bg-blue-500"
                       : "text-slate-300 hover:text-white"
                   }`}
-                  style={link.primary ? {
-                    background: "linear-gradient(135deg, #06b6d4, #3b82f6)",
-                    boxShadow: "0 4px 18px -4px rgba(6,182,212,0.4)",
-                  } : {
+                  style={link.primary ? undefined : {
                     background: "rgba(255,255,255,0.07)",
                   }}
                 >
@@ -156,8 +147,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             })}
             <Link
               href={`/projects/${project.slug}`}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors ml-auto"
-              style={{ background: "rgba(6,182,212,0.07)" }}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors ml-auto"
+              style={{ background: "rgba(37,99,235,0.1)" }}
             >
               Open dedicated page
               <ArrowRight className="w-3.5 h-3.5" />
@@ -189,8 +180,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   </div>
                 )}
                 {project.solution && (
-                  <div className="p-4 rounded-2xl" style={{ background: "rgba(6,182,212,0.06)" }}>
-                    <h5 className="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-2">
+                  <div className="p-4 rounded-2xl" style={{ background: "rgba(37,99,235,0.06)" }}>
+                    <h5 className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
                       The Solution
                     </h5>
                     <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
@@ -205,7 +196,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {project.responsibilities && project.responsibilities.length > 0 && (
               <div>
                 <h4 className="text-xs uppercase tracking-wider font-bold text-slate-500 mb-3 flex items-center gap-2">
-                  <Users className="w-3.5 h-3.5 text-cyan-400" />
+                  <Users className="w-3.5 h-3.5 text-blue-400" />
                   Key Responsibilities ({project.role || "Developer"})
                 </h4>
                 <div className="space-y-2">
@@ -223,15 +214,15 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {project.features && project.features.length > 0 && (
               <div>
                 <h4 className="text-xs uppercase tracking-wider font-bold text-slate-500 mb-3 flex items-center gap-2">
-                  <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+                  <Sparkles className="w-3.5 h-3.5 text-blue-400" />
                   Key Features
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {project.features.map((feat, i) => (
                     <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-400 p-3 rounded-xl"
-                      style={{ background: "rgba(255,255,255,0.03)" }}
+                      style={{ background: "#111111" }}
                     >
-                      <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                       <span>{feat}</span>
                     </div>
                   ))}
@@ -246,10 +237,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   <Layers className="w-3.5 h-3.5 text-blue-400" />
                   Development Process
                 </h4>
-                <div className="space-y-2.5 p-4 rounded-2xl" style={{ background: "rgba(255,255,255,0.025)" }}>
+                <div className="space-y-2.5 p-4 rounded-2xl" style={{ background: "#111111" }}>
                   {project.process.map((step, i) => (
                     <div key={i} className="flex items-start gap-3 text-xs sm:text-sm">
-                      <span className="w-5 h-5 rounded-full bg-cyan-500/20 text-cyan-400 font-mono text-xs flex items-center justify-center shrink-0">
+                      <span className="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 font-mono text-xs flex items-center justify-center shrink-0">
                         {i + 1}
                       </span>
                       <span className="text-slate-400 mt-0.5">{step}</span>
@@ -262,15 +253,15 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Technology Stack */}
             <div>
               <h4 className="text-xs uppercase tracking-wider font-bold text-slate-500 mb-3 flex items-center gap-2">
-                <Cpu className="w-3.5 h-3.5 text-cyan-400" />
+                <Cpu className="w-3.5 h-3.5 text-blue-400" />
                 Technologies Used
               </h4>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1.5 rounded-lg text-xs font-mono text-cyan-300"
-                    style={{ background: "rgba(6,182,212,0.08)" }}
+                    className="px-3 py-1.5 rounded-lg text-xs font-mono text-blue-400"
+                    style={{ background: "rgba(37,99,235,0.1)" }}
                   >
                     {tech}
                   </span>

@@ -16,7 +16,7 @@ export default function Skills() {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case "Layout":
-        return <Layout className="w-5 h-5 text-cyan-400" />;
+        return <Layout className="w-5 h-5 text-blue-400" />;
       case "Code2":
         return <Code2 className="w-5 h-5 text-blue-400" />;
       case "Server":
@@ -28,12 +28,12 @@ export default function Skills() {
       case "Wrench":
         return <Wrench className="w-5 h-5 text-amber-400" />;
       default:
-        return <Sparkles className="w-5 h-5 text-cyan-400" />;
+        return <Sparkles className="w-5 h-5 text-blue-400" />;
     }
   };
 
   return (
-    <section id="skills" className="py-20 md:py-28 relative">
+    <section id="skills" className="py-20 md:py-28 relative bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -43,7 +43,7 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center mb-16"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-3">
             Technical Stack
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
@@ -53,7 +53,7 @@ export default function Skills() {
             Categorized toolkit across full-stack web engineering, microcontroller hardware,
             applied AI, and collaboration systems.
           </p>
-          <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-4" />
+          <div className="w-12 h-1 bg-blue-600 rounded-full mt-4" />
         </motion.div>
 
         {/* Skills Grid */}
@@ -92,11 +92,11 @@ export default function Skills() {
                       key={skill.name}
                       className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 ${
                         skill.highlight
-                          ? "text-cyan-200 hover:text-white"
+                          ? "text-blue-300 hover:text-white"
                           : "text-slate-300 hover:text-white"
                       }`}
                       style={skill.highlight
-                        ? { background: "rgba(6,182,212,0.12)" }
+                        ? { background: "rgba(37,99,235,0.15)" }
                         : { background: "rgba(255,255,255,0.05)" }
                       }
                     >

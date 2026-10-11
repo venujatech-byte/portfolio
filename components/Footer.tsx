@@ -32,11 +32,11 @@ export default function Footer() {
 
           {/* Nav Quick Links */}
           <div className="flex items-center gap-6 text-xs text-slate-400">
-            <a href="#about" className="hover:text-cyan-400 transition-colors">About</a>
-            <a href="#skills" className="hover:text-cyan-400 transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-cyan-400 transition-colors">Projects</a>
-            <a href="#experience" className="hover:text-cyan-400 transition-colors">Experience</a>
-            <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a>
+            <a href="#about" className="hover:text-blue-400 transition-colors">About</a>
+            <a href="#skills" className="hover:text-blue-400 transition-colors">Skills</a>
+            <a href="#projects" className="hover:text-blue-400 transition-colors">Projects</a>
+            <a href="#experience" className="hover:text-blue-400 transition-colors">Experience</a>
+            <a href="#contact" className="hover:text-blue-400 transition-colors">Contact</a>
           </div>
 
           {/* Socials & Back to Top */}
@@ -61,7 +61,7 @@ export default function Footer() {
             </a>
             <button
               onClick={scrollToTop}
-              className="p-2 text-slate-400 hover:text-cyan-400 rounded-lg hover:bg-neutral-800 transition-colors flex items-center gap-1.5 text-xs shadow-sm shadow-black/40"
+              className="p-2 text-slate-400 hover:text-blue-400 rounded-lg hover:bg-neutral-800 transition-colors flex items-center gap-1.5 text-xs shadow-sm shadow-black/40"
               aria-label="Back to top"
             >
               <ArrowUp className="w-4 h-4" />

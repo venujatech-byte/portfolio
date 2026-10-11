@@ -28,7 +28,7 @@ export default function Workflow() {
       tech: "React / Next.js",
       desc: "Component-driven development with responsive CSS & stateful data flows.",
       icon: Code2,
-      color: "text-cyan-400 bg-cyan-500/10",
+      color: "text-blue-400 bg-blue-500/10",
     },
     {
       title: "3. API & Logic",
@@ -110,7 +110,7 @@ export default function Workflow() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center mb-16"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-3">
             Engineering Methodology
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
@@ -120,13 +120,13 @@ export default function Workflow() {
             A structured, reliable lifecycle from initial problem definition to deployed,
             resilient production software and hardware.
           </p>
-          <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-4" />
+          <div className="w-12 h-1 bg-blue-600 rounded-full mt-4" />
         </motion.div>
 
         {/* Track 1: Web & Digital Product Pipeline */}
         <div className="mb-14">
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
+            <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400">
               <Rocket className="w-5 h-5" />
             </div>
             <div>
@@ -155,7 +155,7 @@ export default function Workflow() {
                     <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${step.color} mb-3`}>
                       <IconComponent className="w-4 h-4" />
                     </div>
-                    <span className="text-[11px] font-mono text-cyan-400 uppercase tracking-wider block mb-1">
+                    <span className="text-[11px] font-mono text-blue-400 uppercase tracking-wider block mb-1">
                       {step.title}
                     </span>
                     <h4 className="text-sm font-semibold text-white mb-2">

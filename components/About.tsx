@@ -15,7 +15,7 @@ export default function About() {
       title: "6+ Projects",
       subtitle: "Full-stack web, IoT, and desktop utilities",
       icon: FolderGit2,
-      color: "text-cyan-400 bg-cyan-500/10",
+      color: "text-blue-400 bg-blue-500/10",
     },
     {
       title: "Web & Mobile",
@@ -47,7 +47,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 relative">
+    <section id="about" className="py-20 md:py-28 relative bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -57,13 +57,13 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center mb-16"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-3">
             About Me
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
             Engineering Practical, High-Impact Technology
           </h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-3" />
+          <div className="w-12 h-1 bg-blue-600 rounded-full mt-3" />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -78,7 +78,6 @@ export default function About() {
             <div className="p-6 sm:p-8 rounded-2xl relative overflow-hidden"
               style={{ background: "rgba(12,12,14,0.8)", boxShadow: "0 10px 32px -10px rgba(0,0,0,0.85)" }}
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 blur-3xl rounded-full pointer-events-none" />
               <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                 <span>Building at the Intersection of Software &amp; Hardware</span>
               </h3>
@@ -89,7 +88,7 @@ export default function About() {
                 real-time IoT firmware that bridges physical sensors with the cloud.
               </p>
               <p className="text-slate-300 leading-relaxed text-sm sm:text-base mb-4">
-                As the <span className="text-cyan-300 font-medium">Team Leader on Vendly.lk</span>,
+                As the <span className="text-blue-400 font-medium">Team Leader on Vendly.lk</span>,
                 I guided our development stream through end-to-end product delivery:
                 conceptualizing workflows in Figma, establishing reusable React frontend
                 components, coordinating Flask and Firebase integrations, and facilitating
@@ -116,7 +115,7 @@ export default function About() {
                     key={area}
                     className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                     <span>{area}</span>
                   </div>
                 ))}
@@ -162,13 +161,13 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
               className="p-5 rounded-xl relative overflow-hidden"
-              style={{ background: "linear-gradient(90deg, rgba(6,182,212,0.12) 0%, rgba(12,12,14,0.8) 100%)", boxShadow: "0 4px 20px -6px rgba(0,0,0,0.8)" }}
+              style={{ background: "#0a0a0a", boxShadow: "0 4px 20px -6px rgba(0,0,0,0.8)" }}
             >
               <p className="text-xs sm:text-sm text-slate-300 italic">
                 &ldquo;Great software isn&apos;t just code that runs—it is thoughtful design,
                 dependable architecture, and practical value for the people who use it.&rdquo;
               </p>
-              <span className="block mt-2 text-xs font-semibold text-cyan-400">
+              <span className="block mt-2 text-xs font-semibold text-blue-400">
                 — Venuja Silva
               </span>
             </motion.div>

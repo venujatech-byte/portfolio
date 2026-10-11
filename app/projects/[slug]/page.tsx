@@ -68,7 +68,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           {/* Back to Home / Projects */}
           <Link
             href="/#projects"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-400 hover:text-cyan-400 mb-8 transition-colors group"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-400 hover:text-blue-400 mb-8 transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to all projects
@@ -76,7 +76,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
           {/* Header Badges */}
           <div className="flex flex-wrap items-center gap-2 mb-4">
-            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/12 text-cyan-400">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/12 text-blue-400">
               {project.category}
             </span>
             {project.badge && (
@@ -101,8 +101,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             className="relative w-full rounded-3xl overflow-hidden mb-8"
             style={{
               aspectRatio: "16/7",
-              background: "rgba(255,255,255,0.03)",
-              boxShadow: "0 32px 80px -16px rgba(0,0,0,0.7)",
+              background: "#050505",
             }}
           >
             <Image
@@ -113,7 +112,6 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               sizes="(max-width: 1024px) 100vw, 1000px"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
           </div>
 
           {/* Action Links Bar */}
@@ -126,18 +124,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all hover:scale-105 active:scale-95"
-                  style={link.primary ? {
-                    background: "linear-gradient(135deg, #06b6d4, #3b82f6)",
-                    color: "white",
-                    boxShadow: "0 4px 18px -4px rgba(6,182,212,0.40)",
-                  } : {
+                  className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all hover:scale-105 active:scale-95 ${
+                    link.primary
+                      ? "bg-blue-600 hover:bg-blue-500 text-white"
+                      : "text-slate-300 hover:text-white"
+                  }`}
+                  style={link.primary ? undefined : {
                     background: "rgba(255,255,255,0.07)",
-                    color: "#cbd5e1",
                   }}
                 >
                   {link.type === "live" ? (
-                    <ExternalLink className="w-4 h-4 text-cyan-400" />
+                    <ExternalLink className="w-4 h-4 text-white" />
                   ) : (
                     <Github className="w-4 h-4" />
                   )}
@@ -170,8 +167,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   </div>
                 )}
                 {project.solution && (
-                  <div className="p-6 rounded-2xl" style={{ background: "rgba(6,182,212,0.06)" }}>
-                    <h3 className="text-sm font-bold text-cyan-400 uppercase tracking-wider mb-2">
+                  <div className="p-6 rounded-2xl" style={{ background: "rgba(37,99,235,0.06)" }}>
+                    <h3 className="text-sm font-bold text-blue-400 uppercase tracking-wider mb-2">
                       The Architectural Solution
                     </h3>
                     <p className="text-sm text-slate-400 leading-relaxed">
@@ -184,9 +181,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
             {/* Role & Leadership */}
             {project.responsibilities && project.responsibilities.length > 0 && (
-              <div className="p-6 sm:p-8 rounded-2xl" style={{ background: "rgba(255,255,255,0.03)" }}>
+              <div className="p-6 sm:p-8 rounded-2xl" style={{ background: "#050505" }}>
                 <h3 className="text-base font-bold text-white mb-4 flex items-center gap-2">
-                  <Users className="w-4 h-4 text-cyan-400" />
+                  <Users className="w-4 h-4 text-blue-400" />
                   Leadership &amp; Engineering Responsibilities ({project.role || "Developer"})
                 </h3>
                 <div className="space-y-2.5">
@@ -204,7 +201,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             {project.features && project.features.length > 0 && (
               <div>
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-cyan-400" />
+                  <Sparkles className="w-5 h-5 text-blue-400" />
                   Key Engineering Features
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -212,9 +209,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     <div
                       key={idx}
                       className="p-4 rounded-xl flex items-start gap-3 text-sm text-slate-400"
-                      style={{ background: "rgba(255,255,255,0.04)" }}
+                      style={{ background: "#080808" }}
                     >
-                      <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                       <span>{feat}</span>
                     </div>
                   ))}
@@ -229,10 +226,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   <Layers className="w-5 h-5 text-blue-400" />
                   Development Process &amp; Milestones
                 </h3>
-                <div className="p-6 rounded-2xl space-y-3" style={{ background: "rgba(255,255,255,0.025)" }}>
+                <div className="p-6 rounded-2xl space-y-3" style={{ background: "#080808" }}>
                   {project.process.map((step, idx) => (
                     <div key={idx} className="flex items-start gap-3 text-sm">
-                      <span className="w-5 h-5 rounded-full bg-cyan-500/20 text-cyan-400 font-mono text-xs flex items-center justify-center shrink-0">
+                      <span className="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 font-mono text-xs flex items-center justify-center shrink-0">
                         {idx + 1}
                       </span>
                       <span className="text-slate-400 mt-0.5">{step}</span>
@@ -245,15 +242,15 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             {/* Technologies */}
             <div>
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <Cpu className="w-5 h-5 text-cyan-400" />
+                <Cpu className="w-5 h-5 text-blue-400" />
                 Technology Stack &amp; Protocols
               </h3>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3.5 py-1.5 rounded-lg text-xs font-mono text-cyan-300"
-                    style={{ background: "rgba(6,182,212,0.08)" }}
+                    className="px-3.5 py-1.5 rounded-lg text-xs font-mono text-blue-400"
+                    style={{ background: "rgba(37,99,235,0.1)" }}
                   >
                     {tech}
                   </span>

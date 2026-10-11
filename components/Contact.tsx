@@ -69,13 +69,13 @@ export default function Contact() {
             className="lg:col-span-5 flex flex-col gap-6"
           >
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-3">
                 Get In Touch
               </div>
               <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
                 Let&apos;s Build Something Together
               </h2>
-              <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-4 mb-6" />
+              <div className="w-12 h-1 bg-blue-600 rounded-full mt-4 mb-6" />
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
                 I&apos;m always interested in building useful software, exploring new
                 technologies, and working on challenging projects.
@@ -87,7 +87,7 @@ export default function Contact() {
               {/* Email Card with Copy button */}
               <div className="glass-panel p-4 rounded-xl flex items-center justify-between gap-3 shadow-md shadow-black/40">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">
+                  <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -96,7 +96,7 @@ export default function Contact() {
                     </span>
                     <a
                       href={`mailto:${contactEmail}`}
-                      className="text-sm font-semibold text-white hover:text-cyan-300 transition-colors font-mono"
+                      className="text-sm font-semibold text-white hover:text-blue-400 transition-colors font-mono"
                     >
                       {contactEmail}
                     </a>
@@ -162,7 +162,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-xs text-slate-400 block font-medium">GitHub</span>
-                  <span className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors font-mono">
+                  <span className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors font-mono">
                     github.com/venujatech-byte
                   </span>
                 </div>
@@ -182,7 +182,7 @@ export default function Contact() {
                   <span className="text-xs text-slate-400 block font-medium">
                     LinkedIn
                   </span>
-                  <span className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors font-mono">
+                  <span className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors font-mono">
                     linkedin.com/in/contact-venuja-silva
                   </span>
                 </div>
@@ -214,7 +214,7 @@ export default function Contact() {
                   <h4 className="text-base font-bold text-white mb-1">Message Received!</h4>
                   <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-md mx-auto mb-4">
                     Thank you for reaching out. You can also connect directly via email at{" "}
-                    <span className="text-cyan-300 font-mono">{contactEmail}</span>.
+                    <span className="text-blue-400 font-mono">{contactEmail}</span>.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -239,7 +239,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Alex Mercer"
-                      className="w-full px-4 py-3 rounded-xl border-0 bg-neutral-900/90 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 text-sm transition-all shadow-inner"
+                      className="w-full px-4 py-3 rounded-xl border-0 bg-neutral-900/90 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 text-sm transition-all shadow-inner"
                     />
                   </div>
 
@@ -257,7 +257,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. alex@example.com"
-                      className="w-full px-4 py-3 rounded-xl border-0 bg-neutral-900/90 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 text-sm transition-all shadow-inner"
+                      className="w-full px-4 py-3 rounded-xl border-0 bg-neutral-900/90 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 text-sm transition-all shadow-inner"
                     />
                   </div>
 
@@ -275,14 +275,14 @@ export default function Contact() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell me about your project, idea, or question..."
-                      className="w-full px-4 py-3 rounded-xl border-0 bg-neutral-900/90 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 text-sm transition-all shadow-inner resize-none"
+                      className="w-full px-4 py-3 rounded-xl border-0 bg-neutral-900/90 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 text-sm transition-all shadow-inner resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-sm shadow-lg shadow-cyan-500/25 hover:from-cyan-400 hover:to-blue-500 transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50"
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <span>Sending Message...</span>

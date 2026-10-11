@@ -30,21 +30,17 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
         transition={{ duration: 0.45 }}
         className="w-full rounded-3xl overflow-hidden relative group mb-10"
         style={{
-          background: "linear-gradient(135deg, rgba(14,14,16,0.95) 0%, rgba(6,6,8,0.98) 100%)",
-          boxShadow: "0 32px 80px -20px rgba(0,0,0,0.95), 0 0 40px -10px rgba(6,182,212,0.15)",
+          background: "#050505",
+          boxShadow: "0 24px 60px -15px rgba(0,0,0,0.95)",
         }}
       >
-        {/* Ambient glow accents */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/8 blur-[100px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-blue-600/8 blur-[80px] rounded-full pointer-events-none" />
-
         <div className="relative z-10 p-8 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Details & Actions */}
           <div className="lg:col-span-6 flex flex-col justify-between">
             <div>
               {/* Badges */}
               <div className="flex flex-wrap items-center gap-2 mb-4">
-                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/15 text-cyan-300">
+                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/15 text-blue-400">
                   ★ Featured Primary Project
                 </span>
                 <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/15 text-blue-300">
@@ -59,7 +55,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-3 group-hover:text-cyan-300 transition-colors duration-300">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-3 group-hover:text-blue-400 transition-colors duration-300">
                 {project.title}
               </h3>
 
@@ -73,7 +69,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
                 className="p-4 rounded-2xl mb-5 text-xs text-slate-300 space-y-1.5"
                 style={{ background: "rgba(255,255,255,0.035)" }}
               >
-                <div className="font-semibold text-cyan-400 flex items-center gap-1.5 mb-2">
+                <div className="font-semibold text-blue-400 flex items-center gap-1.5 mb-2">
                   <Sparkles className="w-3.5 h-3.5" />
                   Key Responsibilities as Team Leader
                 </div>
@@ -103,11 +99,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
                 href="https://vendly-lk.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white transition-all hover:scale-105 active:scale-95"
-                style={{
-                  background: "linear-gradient(135deg, #06b6d4, #3b82f6)",
-                  boxShadow: "0 4px 20px -4px rgba(6,182,212,0.45)",
-                }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 shadow-md shadow-blue-900/40 transition-all hover:scale-105 active:scale-95"
               >
                 <ExternalLink className="w-4 h-4" />
                 Live Web App
@@ -134,7 +126,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
               </a>
               <button
                 onClick={() => onSelect(project)}
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors ml-auto"
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors ml-auto"
               >
                 Full Details
                 <ArrowRight className="w-4 h-4" />
@@ -160,10 +152,9 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
                 sizes="(max-width: 1024px) 100vw, 620px"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-3 left-3">
-                <span className="text-xs text-cyan-300 flex items-center gap-1.5 px-3 py-1.5 rounded-full"
-                  style={{ background: "rgba(6,12,26,0.88)", backdropFilter: "blur(8px)" }}
+                <span className="text-xs text-blue-400 flex items-center gap-1.5 px-3 py-1.5 rounded-full"
+                  style={{ background: "#050505" }}
                 >
                   <Info className="w-3.5 h-3.5" />
                   Click to inspect architecture & workflows
@@ -186,23 +177,18 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
       transition={{ duration: 0.35 }}
       className="rounded-2xl overflow-hidden flex flex-col justify-between relative group transition-all duration-350"
       style={{
-        background: "linear-gradient(160deg, rgba(14,14,16,0.92) 0%, rgba(6,6,8,0.96) 100%)",
-        boxShadow: "0 10px 32px -8px rgba(0,0,0,0.85)",
+        background: "#050505",
       }}
       whileHover={{
         y: -4,
-        boxShadow: "0 24px 60px -12px rgba(0,0,0,0.9), 0 0 40px -16px rgba(6,182,212,0.2)",
       }}
     >
-      {/* Ambient glow */}
-      <div className="absolute top-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-cyan-500/8 blur-3xl rounded-full pointer-events-none" />
-
       <div className="relative z-10">
         {/* Project Visual Container */}
         <div
           onClick={() => onSelect(project)}
           className="relative w-full h-44 sm:h-52 overflow-hidden cursor-pointer"
-          style={{ background: "rgba(255,255,255,0.03)" }}
+          style={{ background: "#050505" }}
         >
           <Image
             src={project.image}
@@ -214,14 +200,12 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
           {/* Category badge */}
           <div className="absolute top-3 left-3">
             <span
-              className="px-2.5 py-1 rounded-lg text-[11px] font-semibold text-cyan-300"
-              style={{ background: "rgba(6,12,26,0.82)", backdropFilter: "blur(8px)" }}
+              className="px-2.5 py-1 rounded-lg text-[11px] font-semibold text-blue-400"
+              style={{ background: "#050505" }}
             >
               {project.category}
             </span>
           </div>
-          {/* bottom fade */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
         </div>
 
         {/* Content */}
@@ -229,7 +213,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
           {/* Title */}
           <h3
             onClick={() => onSelect(project)}
-            className="text-base font-bold text-white tracking-tight mb-2 cursor-pointer group-hover:text-cyan-300 transition-colors"
+            className="text-base font-bold text-white tracking-tight mb-2 cursor-pointer group-hover:text-blue-400 transition-colors"
           >
             {project.title}
           </h3>
@@ -245,7 +229,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
               <span
                 key={tech}
                 className="px-2 py-0.5 rounded-md text-[11px] font-mono text-slate-400"
-                style={{ background: "rgba(255,255,255,0.05)" }}
+                style={{ background: "#111111" }}
               >
                 {tech}
               </span>
@@ -261,7 +245,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
           <div className="pt-3 flex items-center justify-between gap-2">
             <button
               onClick={() => onSelect(project)}
-              className="inline-flex items-center gap-1 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+              className="inline-flex items-center gap-1 text-xs font-semibold text-blue-400 hover:text-blue-300 transition-colors"
             >
               View Details
               <ArrowRight className="w-3.5 h-3.5" />
@@ -277,12 +261,12 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-lg text-slate-400 hover:text-white transition-colors"
-                    style={{ background: "rgba(255,255,255,0.06)" }}
+                    style={{ background: "#111111" }}
                     title={link.label}
                     aria-label={link.label}
                   >
                     {link.type === "live" ? (
-                      <ExternalLink className="w-3.5 h-3.5 text-cyan-400" />
+                      <ExternalLink className="w-3.5 h-3.5 text-blue-400" />
                     ) : (
                       <Github className="w-3.5 h-3.5" />
                     )}

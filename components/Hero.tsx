@@ -15,7 +15,7 @@ import { Github, Linkedin } from "@/components/BrandIcons";
 
 export default function Hero() {
   const domains = [
-    { label: "Web Apps", icon: Layers, color: "text-cyan-400 bg-cyan-500/10" },
+    { label: "Web Apps", icon: Layers, color: "text-blue-400 bg-blue-500/10" },
     { label: "Mobile Apps", icon: Smartphone, color: "text-blue-400 bg-blue-500/10" },
     { label: "IoT & Embedded", icon: Cpu, color: "text-emerald-400 bg-emerald-500/10" },
     { label: "AI Integration", icon: Bot, color: "text-violet-400 bg-violet-500/10" },
@@ -25,31 +25,26 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden flex flex-col justify-center min-h-[90vh]"
+      className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden flex flex-col justify-center min-h-[90vh] bg-black"
     >
-      {/* Subtle background glow accents */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none" />
-      <div className="absolute top-1/3 right-1/4 w-[400px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
 
-          {/* Profile Photo Avatar */}
+          {/* Profile Photo Avatar — Large, Crisp on Complete Black */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.85 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="relative mb-6 group"
+            className="relative mb-8 group"
           >
-            <div className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 opacity-25 blur-xl group-hover:opacity-50 transition duration-500" />
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden bg-neutral-950 shadow-2xl shadow-cyan-500/20">
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden bg-black ring-2 ring-blue-600/40 shadow-2xl shadow-black">
               <Image
                 src="/images/profile.png"
                 alt="Venuja Silva"
                 fill
                 priority
                 className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 640px) 128px, 160px"
+                sizes="(max-width: 640px) 224px, (max-width: 768px) 288px, 320px"
               />
             </div>
           </motion.div>
@@ -61,10 +56,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4"
           >
-            Hi, I&apos;m{" "}
-            <span className="bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
-              Venuja Silva
-            </span>
+            Hi, I&apos;m Venuja Silva
           </motion.h1>
 
           {/* Professional Title */}
@@ -72,7 +64,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl sm:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent mb-6"
+            className="text-xl sm:text-2xl lg:text-3xl font-semibold text-blue-400 mb-6"
           >
             Software Developer | AI &amp; IoT Enthusiast
           </motion.h2>
@@ -102,17 +94,17 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-sm shadow-lg shadow-cyan-500/25 hover:from-cyan-400 hover:to-blue-500 transition-all hover:scale-105 active:scale-95"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-lg shadow-blue-950/40 transition-all hover:scale-105 active:scale-95"
             >
               View My Projects
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900/90 hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold text-sm backdrop-blur-md transition-all hover:scale-105 active:scale-95 shadow-md shadow-black/40"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold text-sm backdrop-blur-md transition-all hover:scale-105 active:scale-95 shadow-md shadow-black"
             >
               Contact Me
-              <Send className="w-4 h-4 text-cyan-400" />
+              <Send className="w-4 h-4 text-blue-400" />
             </a>
 
             {/* Social Badges */}
