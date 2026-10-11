@@ -36,7 +36,7 @@ export default function Hero() {
             fill
             priority
             className="object-cover object-left"
-            sizes="100vw"
+            sizes="(min-width: 1024px) 100vw, 0px"
           />
         </div>
 
@@ -48,7 +48,7 @@ export default function Hero() {
             fill
             priority
             className="object-cover object-[24%_center]"
-            sizes="100vw"
+            sizes="(max-width: 1023px) 100vw, 0px"
           />
         </div>
       </div>
